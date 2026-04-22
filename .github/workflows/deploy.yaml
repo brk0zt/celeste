@@ -41,7 +41,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Projenizin derlenmiş çıktısının klasör adı. Bunu kontrol etmeniz gerekli!
-          path: './dist'  # React, Vite, Vue projeleri için genelde 'dist', Angular için 'dist/your-project-name'
+          path: './dist/public'  # React, Vite, Vue projeleri için genelde 'dist', Angular için 'dist/your-project-name'
 
       - name: Deploy to GitHub Pages
+          
+        
+        
         uses: actions/deploy-pages@v4
