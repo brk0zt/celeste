@@ -7,8 +7,15 @@ import { createContext } from "./context";
 import { env } from "./lib/env";
 import { createOAuthCallbackHandler } from "./kimi/auth";
 import { Paths } from "@contracts/constants";
+import { cors } from 'hono/cors'
 
 const app = new Hono<{ Bindings: HttpBindings }>();
+
+app.use('*', cors({
+  origin: 'https://brk0zt.github.io', // Frontend'inin adresi
+  allowHeaders: ['Content-Type', 'Authorization'],
+  allowMethods: ['POST', 'GET', 'OPTIONS', 'PUT', 'DELETE'],
+}))
 
 app.use(bodyLimit({ maxSize: 50 * 1024 * 1024 }));
 app.get(Paths.oauthCallback, createOAuthCallbackHandler());
