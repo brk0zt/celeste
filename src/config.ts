@@ -80,17 +80,17 @@ export interface StorageConfig {
 export interface StarterNote extends Pick<Note, 'title' | 'content' | 'tags' | 'source'> {}
 
 export const siteConfig: SiteConfig = {
-  title: "大模型学习笔记",
-  description: "大语言模型学习笔记 - 从Transformer到AGI的知识探索",
-  language: "zh-CN",
+  title: "LLM Öğrenme Notları",
+  description: "Büyük Dil Modelleri Öğrenme Notları - Transformer'dan AGI'ye Bilgi Keşfi",
+  language: "tr-TR",
 }
 
 export const headerConfig: HeaderConfig = {
-  brandMark: "LLM笔记",
-  noteCountSuffix: "条笔记",
-  editorViewLabel: "编辑",
-  graphViewLabel: "图谱",
-  backgroundButtonTitle: "切换背景",
+  brandMark: "LLM Notları",
+  noteCountSuffix: "not",
+  editorViewLabel: "Düzenle",
+  graphViewLabel: "Harita",
+  backgroundButtonTitle: "Arka Planı Değiştir",
   importButtonLabel: "",
 }
 
@@ -98,1030 +98,1030 @@ export const backgroundConfig: BackgroundConfig = {
   defaultMode: 'moonlit',
   defaultSolidColor: '#000000',
   options: [
-    { id: 'moonlit', label: "月夜涟漪" },
-    { id: 'silk', label: "丝绸流场" },
-    { id: 'rain', label: "雨落寒窗" },
-    { id: 'solid', label: "纯色" },
+    { id: 'moonlit', label: "Ay Işığı" },
+    { id: 'silk', label: "İpek Akış" },
+    { id: 'rain', label: "Yağmur" },
+    { id: 'solid', label: "Düz Renk" },
   ],
   solidColors: [
-    { color: '#000000', label: "墨黑" },
-    { color: '#1a1a2e', label: "深蓝" },
-    { color: '#1a1308', label: "棕褐" },
-    { color: '#0d1f0d', label: "墨绿" },
+    { color: '#000000', label: "Mat Siyah" },
+    { color: '#1a1a2e', label: "Koyu Mavi" },
+    { color: '#1a1308', label: "Kahverengi" },
+    { color: '#0d1f0d', label: "Koyu Yeşil" },
   ],
 }
 
 export const sidebarConfig: SidebarConfig = {
-  searchPlaceholder: "搜索学习笔记...",
-  noResultsLabel: "未找到匹配笔记",
-  emptyNotesLabel: "暂无笔记",
-  selectAllLabel: "全选",
-  clearSelectionLabel: "取消全选",
-  selectedCountSuffix: "条已选",
-  deleteSelectedLabel: "删除",
-  cancelLabel: "取消",
-  newNoteLabel: "新笔记",
-  manageLabel: "管理",
+  searchPlaceholder: "Notlarda ara...",
+  noResultsLabel: "Eşleşen not bulunamadı",
+  emptyNotesLabel: "Henüz not yok",
+  selectAllLabel: "Tümünü Seç",
+  clearSelectionLabel: "Seçimi Temizle",
+  selectedCountSuffix: "seçildi",
+  deleteSelectedLabel: "Sil",
+  cancelLabel: "İptal",
+  newNoteLabel: "Yeni Not",
+  manageLabel: "Yönet",
 }
 
 export const editorConfig: EditorConfig = {
-  editLabel: "编辑",
-  previewLabel: "预览",
-  sourceLabel: "来源",
-  deleteLabel: "删除",
-  cancelLabel: "取消",
-  titlePlaceholder: "笔记标题...",
-  contentPlaceholder: "用 [[标题]] 创建 Wiki 链接，支持 Markdown 语法...",
-  outgoingLinksLabel: "出链:",
-  incomingLinksLabel: "反链:",
+  editLabel: "Düzenle",
+  previewLabel: "Önizleme",
+  sourceLabel: "Kaynak",
+  deleteLabel: "Sil",
+  cancelLabel: "İptal",
+  titlePlaceholder: "Not başlığı...",
+  contentPlaceholder: "[[Başlık]] ile Wiki bağlantısı oluştur, Markdown desteklenir...",
+  outgoingLinksLabel: "Giden Bağlantılar:",
+  incomingLinksLabel: "Gelen Bağlantılar:",
 }
 
 export const graphConfig: GraphConfig = {
-  notesLabel: "个笔记",
-  connectionsLabel: "条连接",
-  emptyGraphLabel: "暂无笔记，创建第一条笔记来开始",
+  notesLabel: "not",
+  connectionsLabel: "bağlantı",
+  emptyGraphLabel: "Henüz not yok, başlamak için ilk notunuzu oluşturun",
 }
 
 export const moonConfig: MoonConfig = {
-  phaseLabels: ["新月", "蛾眉月", "上弦月", "盈凸月", "满月", "亏凸月", "下弦月", "残月"],
+  phaseLabels: ["Yeni Ay", "Hilal", "İlk Dördün", "Dolunay Öncesi", "Dolunay", "Dolunay Sonrası", "Son Dördün", "Küçülen Ay"],
 }
 
 export const appConfig: AppConfig = {
-  emptyStateLabel: "选择或创建一个笔记开始",
+  emptyStateLabel: "Başlamak için bir not seçin veya oluşturun",
 }
 
 export const storageConfig: StorageConfig = {
-  notesKey: "llm-notes-v1",
+  notesKey: "llm-notlar-v1",
 }
 
 export const starterNotes: StarterNote[] = [
   {
-    title: "大语言模型概述",
-    content: `# 大语言模型概述
+    title: "Büyük Dil Modelleri Özeti",
+    content: `# Büyük Dil Modelleri Özeti
 
-**大语言模型**（Large Language Model，简称LLM）是基于深度学习技术构建的人工智能模型，专门用于理解和生成自然语言。它们通过在海量文本数据上进行训练，学会了语言的统计规律和语义表示。
+**Büyük Dil Modelleri** (Large Language Model, LLM), doğal dili anlama ve oluşturma için tasarlanmış, derin öğrenme teknolojisine dayalı yapay zeka modelleridir. Büyük metin verileri üzerinde eğitilerek, dilin istatistiksel kalıplarını ve anlamsal temsillerini öğrenirler.
 
-## 核心特征
+## Temel Özellikler
 
-- **参数量巨大**：从数十亿到数万亿不等
-- **涌现能力**：规模达到某个阈值后突然表现出新的能力
-- **上下文学习**：通过提示词（prompt）就能完成新任务，无需微调
-- **多任务通用**：一个模型可以处理翻译、摘要、问答、代码生成等多种任务
+- **Devasa Parametre Sayısı**: Milyardan trilyona kadar
+- **Ortaya Çıkan Yetenekler**: Belirli bir eşiğe ulaşıldığında yeni yetenekler aniden ortaya çıkar
+- **Bağlam İçi Öğrenme**: İnce ayar yapmadan, istemler (prompt) ile yeni görevleri tamamlama
+- **Çok Görevli**: Çeviri, özetleme, soru yanıtlama, kod oluşturma gibi birçok görevi tek bir model işleyebilir
 
-## 发展历程
+## Gelişim Süreci
 
-| 时间 | 里程碑 |
-|------|--------|
-| 2017 | Transformer架构提出 |
-| 2018 | GPT-1、BERT发布 |
-| 2019 | GPT-2发布（15亿参数） |
-| 2020 | GPT-3发布（1750亿参数） |
-| 2022 | ChatGPT发布，引发AI革命 |
-| 2023 | GPT-4、Claude、Gemini等大模型涌现 |
-| 2024 | 多模态大模型、推理模型（o1）出现 |
+| Zaman | Dönüm Noktası |
+|------|--------------|
+| 2017 | Transformer mimarisi önerildi |
+| 2018 | GPT-1, BERT yayınlandı |
+| 2019 | GPT-2 yayınlandı (1,5 milyar parametre) |
+| 2020 | GPT-3 yayınlandı (175 milyar parametre) |
+| 2022 | ChatGPT yayınlandı, AI devrimi başladı |
+| 2023 | GPT-4, Claude, Gemini gibi büyük modeller ortaya çıktı |
+| 2024 | Çok modlu modeller, akıl yürütme modelleri (o1) ortaya çıktı |
 
-## 主要代表模型
+## Başlıca Temsilci Modeller
 
-- **OpenAI**：GPT系列、GPT-4、o1推理模型
-- **Anthropic**：Claude系列
-- **Google**：Gemini、PaLM
-- **Meta**：LLaMA系列（开源）
-- **DeepSeek**：DeepSeek-V3、DeepSeek-R1
-- **阿里**：通义千问（Qwen）
+- **OpenAI**: GPT serisi, GPT-4, o1 akıl yürütme modeli
+- **Anthropic**: Claude serisi
+- **Google**: Gemini, PaLM
+- **Meta**: LLaMA serisi (açık kaynak)
+- **DeepSeek**: DeepSeek-V3, DeepSeek-R1
+- **Alibaba**: Tongyi Qianwen (Qwen)
 
-参见[[Transformer架构]]、[[预训练与微调]]、[[提示工程]]`,
-    tags: ["概述", "AI", "LLM"],
+Bkz. [[Transformer Mimarisi]], [[Ön Eğitim ve İnce Ayar]], [[İstem Mühendisliği]]`,
+    tags: ["Özet", "AI", "LLM"],
     source: "",
   },
   {
-    title: "Transformer架构",
-    content: `# Transformer架构
+    title: "Transformer Mimarisi",
+    content: `# Transformer Mimarisi
 
-**Transformer**是2017年Google在论文《Attention Is All You Need》中提出的神经网络架构，它彻底改变了自然语言处理领域，成为所有现代大语言模型的基础。
+**Transformer**, 2017'de Google'ın "Attention Is All You Need" makalesinde önerdiği sinir ağı mimarisidir. Doğal dil işleme alanını kökten değiştirmiş ve tüm modern büyük dil modellerinin temelini oluşturmuştur.
 
-## 核心创新
+## Temel İnovasyon
 
-Transformer完全基于**注意力机制**（Attention），摒弃了之前广泛使用的循环神经网络（RNN）和卷积神经网络（CNN）。
+Transformer tamamen **Dikkat Mekanizması**'na (Attention) dayanır ve daha önce yaygın olarak kullanılan RNN (Tekrarlayan Sinir Ağları) ve CNN (Evrişimli Sinir Ağları) mimarilerini ortadan kaldırır.
 
-> "Attention Is All You Need" —— 论文标题本身就说明了核心思想
+> "Attention Is All You Need" —— Makale başlığı temel fikrin özünü açıklar
 
-## 架构组成
+## Mimari Bileşenleri
 
-Transformer由**编码器**（Encoder）和**解码器**（Decoder）两部分组成：
+Transformer **Kodlayıcı** (Encoder) ve **Kod Çözücü** (Decoder) olmak üzere iki bölümden oluşur:
 
-### 编码器（Encoder）
+### Kodlayıcı (Encoder)
 
-- 由N个相同的编码器层堆叠（原论文中N=6）
-- 每层包含：
-  1. **多头自注意力机制** —— 让每个词关注序列中所有其他词
-  2. **前馈神经网络** —— 对每个位置独立进行非线性变换
-  3. **层归一化 + 残差连接** —— 稳定训练
+- N adet aynı kodlayıcı katmanı yığından oluşur (orijinal makalede N=6)
+- Her katman şunları içerir:
+  1. **Çok Başlı Öz Dikkat Mekanizması** —— Her kelimenin dizideki diğer tüm kelimelere odaklanmasını sağlar
+  2. **İleri Beslemeli Sinir Ağı** —— Her pozisyon için bağımsız doğrusal olmayan dönüşüm
+  3. **Katman Normalizasyonu + Artık Bağlantılar** —— Eğitimi stabilize eder
 
-### 解码器（Decoder）
+### Kod Çözücü (Decoder)
 
-- 同样由N个相同的解码器层堆叠
-- 每层额外包含**掩码多头注意力** —— 防止看到未来的词
-- 最终通过Softmax输出概率分布
+- Aynı şekilde N adet kod çözücü katmanı yığından oluşur
+- Her katman ek olarak **Maskeli Çok Başlı Dikkat** içerir —— Gelecekteki kelimeleri görmemeyi sağlar
+- Son olarak Softmax ile olasılık dağılımı çıktısı verir
 
-## 关键组件
+## Temel Bileşenler
 
-### 位置编码（Positional Encoding）
+### Konumsal Kodlama (Positional Encoding)
 
-由于Transformer没有循环结构，需要显式注入位置信息：
+Transformer'ın döngüsel yapısı olmadığından, pozisyon bilgisinin açıkça enjekte edilmesi gerekir:
 
 \`\`\`
 PE(pos, 2i) = sin(pos / 10000^(2i/d_model))
 PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
 \`\`\`
 
-### 多头注意力（Multi-Head Attention）
+### Çok Başlı Dikkat (Multi-Head Attention)
 
-将注意力机制并行执行多次，让模型在不同表示子空间中捕捉不同的关系模式。
+Dikkat mekanizmasını birden fazla kez paralel olarak çalıştırarak, modelin farklı temsil alt uzaylarında farklı ilişki kalıplarını yakalamasını sağlar.
 
-## 为什么Transformer如此强大
+## Transformer Neden Bu Kadar Güçlü
 
-1. **并行计算** —— 不像RNN需要顺序处理
-2. **长距离依赖** —— 注意力可以直接连接任意两个位置
-3. **可扩展性** —— 堆叠更多层、增加更多参数就能持续提升性能
+1. **Paralel Hesaplama** —— RNN gibi sıralı işlem gerektirmez
+2. **Uzun Mesafe Bağımlılıkları** —— Dikkat mekanizması herhangi iki pozisyonu doğrudan bağlayabilir
+3. **Ölçeklenebilirlik** —— Daha fazla katman ve parametre eklenerek performans sürekli artırılabilir
 
-参见[[注意力机制]]、[[大语言模型概述]]、[[预训练与微调]]`,
-    tags: ["架构", "Transformer", "深度学习"],
+Bkz. [[Dikkat Mekanizması]], [[Büyük Dil Modelleri Özeti]], [[Ön Eğitim ve İnce Ayar]]`,
+    tags: ["Mimari", "Transformer", "Derin Öğrenme"],
     source: "Vaswani et al., 'Attention Is All You Need', NeurIPS 2017",
   },
   {
-    title: "注意力机制",
-    content: `# 注意力机制
+    title: "Dikkat Mekanizması",
+    content: `# Dikkat Mekanizması
 
-**注意力机制**（Attention Mechanism）是深度学习中最具革命性的创新之一，它让模型能够动态地关注输入中最相关的部分。
+**Dikkat Mekanizması** (Attention Mechanism), derin öğrenmedeki en devrimsel yeniliklerden biridir. Modele, girdideki en ilgili kısımlara dinamik olarak odaklanma yeteneği kazandırır.
 
-## 直观理解
+## Sezgisel Anlayış
 
-注意力机制模仿人类的注意力：当我们阅读一段话时，不会对所有词给予同等的关注，而是会根据当前任务聚焦于关键信息。
+Dikkat mekanizması insan dikkatini taklit eder: Bir metin okurken tüm kelimelere eşit derecede odaklanmayız, bunun yerine mevcut göreve göre temel bilgilere odaklanırız.
 
-## Scaled Dot-Product Attention
+## Ölçekli Nokta Çarpımı Dikkati
 
-Transformer中使用的注意力计算：
+Transformer'da kullanılan dikkat hesaplaması:
 
 \`\`\`
 Attention(Q, K, V) = softmax(QK^T / √d_k) · V
 \`\`\`
 
-### 三个关键矩阵
+### Üç Temel Matris
 
-| 矩阵 | 含义 | 作用 |
-|------|------|------|
-| **Q** (Query) | 查询 | 当前位置想"问什么" |
-| **K** (Key) | 键 | 其他位置的"标签" |
-| **V** (Value) | 值 | 其他位置的"实际内容" |
+| Matris | Anlamı | İşlevi |
+|--------|--------|--------|
+| **Q** (Query) | Sorgu | Geçerli konumun "neyi sorduğu" |
+| **K** (Key) | Anahtar | Diğer konumların "etiketleri" |
+| **V** (Value) | Değer | Diğer konumların "gerçek içeriği" |
 
-### 计算步骤
+### Hesaplama Adımları
 
-1. 计算Q和K的点积，得到注意力分数
-2. 除以√d_k进行缩放（防止Softmax梯度消失）
-3. Softmax归一化为概率分布
-4. 与V相乘，得到加权求和的输出
+1. Q ve K'nin nokta çarpımını hesapla, dikkat skorları elde edilir
+2. √d_k'ye bölerek ölçeklendir (Softmax gradyan kaybolmasını önlemek için)
+3. Softmax ile olasılık dağılımına normalize et
+4. V ile çarp, ağırlıklı toplam çıktısı elde edilir
 
-## 自注意力 vs 交叉注意力
+## Öz Dikkat vs Çapraz Dikkat
 
-### 自注意力（Self-Attention）
+### Öz Dikkat (Self-Attention)
 
-Q、K、V都来自同一个输入序列。每个词都可以"看"到序列中所有其他词。
+Q, K, V aynı girdi dizisinden gelir. Her kelime dizideki diğer tüm kelimeleri "görebilir".
 
-> 例：在"The cat sat on the mat"中，处理"sat"时，自注意力会让它关注到"cat"和"mat"。
+> Örn: "The cat sat on the mat" cümlesinde "sat" kelimesini işlerken, öz dikkat onun "cat" ve "mat" kelimelerine odaklanmasını sağlar.
 
-### 交叉注意力（Cross-Attention）
+### Çapraz Dikkat (Cross-Attention)
 
-Q来自解码器，K和V来自编码器。用于seq2seq任务中让解码器关注编码器的输出。
+Q kod çözücüden, K ve V kodlayıcıdan gelir. Seq2seq görevlerinde kod çözücünün kodlayıcı çıktısına odaklanmasını sağlar.
 
-## 多头注意力（Multi-Head Attention）
+## Çok Başlı Dikkat (Multi-Head Attention)
 
-将注意力计算并行执行h次（通常h=8或16），每次使用不同的线性投影：
+Dikkat hesaplamasını h kez (genellikle h=8 veya 16) paralel olarak çalıştırır, her seferinde farklı lineer projeksiyon kullanılır:
 
 \`\`\`
 MultiHead(Q,K,V) = Concat(head_1, ..., head_h) · W^O
 \`\`\`
 
-其中每个head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)
+Burada her head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)
 
-### 为什么需要多头？
+### Neden Çok Başlı Gerekli?
 
-- 不同头可以学习不同的关系类型
-- 一个头可能学习语法关系，另一个学习语义关系
-- 增加模型的表达能力
+- Farklı başlıklar farklı ilişki türlerini öğrenebilir
+- Bir başlık sözdizimi ilişkileri öğrenirken, diğeri anlamsal ilişkileri öğrenebilir
+- Modelin ifade gücünü artırır
 
-## 掩码注意力（Masked Attention）
+## Maskeli Dikkat (Masked Attention)
 
-在解码器中，使用上三角掩码矩阵防止位置i关注到位置>i的词，确保自回归生成。
+Kod çözücüde, üst üçgen maske matrisi kullanılarak i. konumun >i konumundaki kelimelere odaklanması engellenir, otoregresif üretim sağlanır.
 
-## 应用扩展
+## Uygulama Genişlemeleri
 
-- **视觉Transformer（ViT）**：将注意力用于图像处理
-- **图注意力网络（GAT）**：将注意力用于图结构数据
-- **多模态注意力**：跨模态注意力（如图像-文本对齐）
+- **Görsel Transformer (ViT)**: Dikkati görüntü işlemeye uygulama
+- **Graf Dikkat Ağları (GAT)**: Dikkati graf yapısı verilerine uygulama
+- **Çok Modlu Dikkat**: Çapraz modal dikkat (örn. görüntü-metin hizalama)
 
-参见[[Transformer架构]]、[[大语言模型概述]]`,
-    tags: ["注意力机制", "深度学习", "核心概念"],
+Bkz. [[Transformer Mimarisi]], [[Büyük Dil Modelleri Özeti]]`,
+    tags: ["Dikkat Mekanizması", "Derin Öğrenme", "Temel Kavramlar"],
     source: "",
   },
   {
-    title: "预训练与微调",
-    content: `# 预训练与微调
+    title: "Ön Eğitim ve İnce Ayar",
+    content: `# Ön Eğitim ve İnce Ayar
 
-**预训练-微调**（Pre-training & Fine-tuning）范式是大语言模型成功的关键方法论。它分为两个阶段：先在大量无标注数据上学习通用语言表示，再在特定任务的标注数据上进行调整。
+**Ön Eğitim-İnce Ayar** (Pre-training & Fine-tuning) paradigması, büyük dil modellerinin başarısının temel metodolojisidir. İki aşamaya ayrılır: Önce büyük miktarda etiketsiz veride genel dil temsilleri öğrenilir, sonra belirli görevlerin etiketli verilerinde ayarlama yapılır.
 
-## 预训练（Pre-training）
+## Ön Eğitim (Pre-training)
 
-### 目标
+### Hedef
 
-让模型学习语言的通用表示：语法、语义、世界知识、推理能力等。
+Modelin dilin genel temsillerini öğrenmesi: Dil bilgisi, anlam, dünya bilgisi, akıl yürütme yeteneği vb.
 
-### 主要方法
+### Ana Yöntemler
 
-#### 1. 自回归语言建模（Autoregressive LM）
+#### 1. Otoregresif Dil Modellemesi (Autoregressive LM)
 
-**代表**：GPT系列
+**Temsilci**: GPT serisi
 
-目标：给定前面的词，预测下一个词
+Hedef: Önceki kelimeler verildiğinde, sonraki kelimeyi tahmin etmek
 
 \`\`\`
 L = -Σ log P(x_i | x_1, x_2, ..., x_{i-1})
 \`\`\`
 
-优点：擅长生成任务
-缺点：只能单向编码上下文
+Avantaj: Üretim görevlerinde başarılı
+Dezavantaj: Bağlamı sadece tek yönlü kodlayabilir
 
-#### 2. 掩码语言建模（Masked LM）
+#### 2. Maskeli Dil Modellemesi (Masked LM)
 
-**代表**：BERT
+**Temsilci**: BERT
 
-随机掩码输入中15%的词，让模型预测被掩码的词
+Girdinin %15'lik kısmı rastgele maskelenir, model maskedeki kelimeleri tahmin eder
 
-优点：双向编码，理解能力更强
-缺点：不适合直接生成
+Avantaj: Çift yönlü kodlama, daha güçlü anlama yeteneği
+Dezavantaj: Doğrudan üretim için uygun değil
 
-#### 3. 前缀语言建模（Prefix LM）
+#### 3. Önek Dil Modellemesi (Prefix LM)
 
-**代表**：T5、GLM
+**Temsilci**: T5, GLM
 
-结合以上两种方法的优点
+Yukarıdaki iki yöntemin avantajlarını birleştirir
 
-## 微调（Fine-tuning）
+## İnce Ayar (Fine-tuning)
 
-### 全参数微调
+### Tam Parametre İnce Ayarı
 
-在预训练模型的所有参数上继续训练，需要大量计算资源。
+Ön eğitimli modelin tüm parametrelerinde eğitime devam edilir, çok fazla hesaplama kaynağı gerektirir.
 
-### 高效微调方法
+### Verimli İnce Ayar Yöntemleri
 
-#### LoRA（Low-Rank Adaptation）
+#### LoRA (Düşük Rütbeli Adaptasyon)
 
-只训练低秩适配矩阵，大幅减少参数量：
+Sadece düşük rütbeli adaptasyon matrisleri eğitilerek parametre sayısı büyük ölçüde azaltılır:
 
 \`\`\`
 W' = W + ΔW = W + BA
 \`\`\`
 
-其中B ∈ R^(d×r)，A ∈ R^(r×k)，r << d,k
+Burada B ∈ R^(d×r), A ∈ R^(r×k), r << d,k
 
-通常r=8或16，可训练参数减少99%以上。
+Genellikle r=8 veya 16, eğitilebilir parametreler %99'dan fazla azalır.
 
-#### 其他高效方法
+#### Diğer Verimli Yöntemler
 
-| 方法 | 原理 |
-|------|------|
-| **Prompt Tuning** | 学习软提示嵌入 |
-| **Prefix Tuning** | 学习前缀向量 |
-| **Adapter** | 在层间插入小型适配模块 |
-| **IA³** | 学习缩放向量 |
+| Yöntem | Prensip |
+|--------|---------|
+| **Prompt Tuning** | Yumuşak istem gömülerini öğrenme |
+| **Prefix Tuning** | Önek vektörlerini öğrenme |
+| **Adapter** | Katmanlar arasına küçük adaptasyon modülleri ekleme |
+| **IA³** | Ölçeklendirme vektörlerini öğrenme |
 
-## 预训练数据
+## Ön Eğitim Verileri
 
-### 数据来源
+### Veri Kaynakları
 
-- Common Crawl（网页数据）
-- GitHub（代码数据）
-- 书籍（BooksCorpus、Gutenberg）
-- 维基百科
-- 学术论文
-- 社交媒体对话
+- Common Crawl (web verisi)
+- GitHub (kod verisi)
+- Kitaplar (BooksCorpus, Gutenberg)
+- Vikipedi
+- Akademik makaleler
+- Sosyal medya konuşmaları
 
-### 数据清洗
+### Veri Temizleme
 
-- 去重（MinHash/LSH）
-- 质量过滤（基于困惑度、规则过滤）
-- 隐私脱敏（PII检测与移除）
-- 毒性内容过滤
+- Tekrarları kaldırma (MinHash/LSH)
+- Kalite filtreleme (perplexity tabanlı, kural tabanlı)
+- Gizlilik anonimleştirme (PII tespiti ve kaldırma)
+- Zararlı içerik filtreleme
 
-## 训练成本
+## Eğitim Maliyeti
 
-GPT-3级别的模型训练成本：
+GPT-3 düzeyinde model eğitim maliyeti:
 
-- 算力：数千张V100/A100 GPU
-- 时间：数周到数月
-- 费用：数百万到数千万美元
+- Hesaplama: Binlerce V100/A100 GPU
+- Zaman: Birkaç haftadan birkaç aya
+- Maliyet: Milyonlarca dolar
 
-参见[[大语言模型概述]]、[[Transformer架构]]、[[模型评估]]`,
-    tags: ["训练", "微调", "LoRA", "方法论"],
+Bkz. [[Büyük Dil Modelleri Özeti]], [[Transformer Mimarisi]], [[Model Değerlendirme]]`,
+    tags: ["Eğitim", "İnce Ayar", "LoRA", "Metodoloji"],
     source: "",
   },
   {
-    title: "提示工程",
-    content: `# 提示工程
+    title: "İstem Mühendisliği",
+    content: `# İstem Mühendisliği
 
-**提示工程**（Prompt Engineering）是设计和优化输入提示（prompt），以引导大语言模型产生期望输出的技术。它是使用LLM最核心、最高效的技能。
+**İstem Mühendisliği** (Prompt Engineering), büyük dil modellerinden istenen çıktıyı elde etmek için girdi istemlerini (prompt) tasarlama ve optimize etme tekniğidir. LLM kullanımının en temel ve en verimli becerisidir.
 
-## 基本原则
+## Temel İlkeler
 
-1. **清晰具体** —— 明确告诉模型你想要什么
-2. **提供上下文** —— 给模型足够的背景信息
-3. **给出示例** —— 用样例展示期望的输出格式
-4. **分解任务** —— 复杂任务拆分成简单步骤
+1. **Açık ve Net** —— Modele ne istediğinizi açıkça söyleyin
+2. **Bağlam Sağlama** —— Modele yeterli arka plan bilgisi verin
+3. **Örnek Verme** —— Beklenen çıktı formatını örneklerle gösterin
+4. **Görevi Bölme** —— Karmaşık görevleri basit adımlara ayırın
 
-## 核心技巧
+## Temel Teknikler
 
 ### Zero-Shot Prompting
 
-直接描述任务，不提供示例：
+Görevi doğrudan tanımlama, örnek vermeden:
 
 \`\`\`
-请将以下英文翻译成中文：
+Lütfen aşağıdaki İngilizce metni Türkçe'ye çevir:
 "The future of AI is bright."
 \`\`\`
 
 ### Few-Shot Prompting
 
-提供几个输入-输出示例，让模型学习模式：
+Modelin kalıp öğrenmesi için birkaç girdi-çıktı örneği sağlama:
 
 \`\`\`
-英文 → 中文
-"Hello" → "你好"
-"Good morning" → "早上好"
-"How are you?" → "你好吗？"
+İngilizce → Türkçe
+"Hello" → "Merhaba"
+"Good morning" → "Günaydın"
+"How are you?" → "Nasılsın?"
 "Nice to meet you" → 
 \`\`\`
 
-### Chain-of-Thought（思维链）
+### Chain-of-Thought (Düşünce Zinciri)
 
-引导模型逐步推理，显著提升复杂任务表现：
-
-\`\`\`
-问题：小明有5个苹果，给了小红2个，又买了3个，现在有几个？
-
-让我们一步步思考：
-- 初始有5个苹果
-- 给了小红2个，还剩 5 - 2 = 3个
-- 又买了3个，现在有 3 + 3 = 6个
-- 答案：6个苹果
-\`\`\`
-
-### 高级技巧
-
-| 技巧 | 说明 |
-|------|------|
-| **角色设定** | "你是一位资深程序员..." |
-| **思维树（ToT）** | 探索多个推理路径 |
-| **自我一致性** | 多次采样选择最一致的答案 |
-| **ReAct** | 推理+行动循环，结合工具使用 |
-| **反射（Reflection）** | 让模型自我评估和改进 |
-
-## 结构化输出
-
-通过提示让模型输出JSON、Markdown等结构化格式：
+Modeli adım adım akıl yürütmeye yönlendirme, karmaşık görevlerde performansı önemli ölçüde artırır:
 
 \`\`\`
-请分析以下评论的情感，以JSON格式输出：
-{"sentiment": "positive/negative/neutral", "confidence": 0-1, "reason": "..."}
+Soru: Ali'nin 5 elması var, 2 tanesini Ayşe'ye verdi, sonra 3 tane daha aldı. Şimdi kaç elması var?
+
+Adım adım düşünelim:
+- Başlangıçta 5 elması var
+- Ayşe'ye 2 verdi, 5 - 2 = 3 elması kaldı
+- 3 tane daha aldı, şimdi 3 + 3 = 6 elması var
+- Cevap: 6 elması var
 \`\`\`
 
-## 常见陷阱
+### İleri Düzey Teknikler
 
-- **提示注入攻击** —— 用户输入覆盖系统指令
-- **模糊指令** —— 模型不理解真实意图
-- **过度拟合示例** —— 模型只模仿格式不理解逻辑
-- **忽略边缘情况** —— 没有考虑所有可能的输入
+| Teknik | Açıklama |
+|--------|----------|
+| **Rol Atama** | "Sen kıdemli bir yazılımcısın..." |
+| **Düşünce Ağacı (ToT)** | Birden fazla akıl yürütme yolunu keşfetme |
+| **Öz Tutarlılık** | Birden fazla örnekleme yapıp en tutarlı yanıtı seçme |
+| **ReAct** | Akıl yürütme + eylem döngüsü, araç kullanımı ile birleştirme |
+| **Yansıtma (Reflection)** | Modelin kendini değerlendirmesini ve iyileştirmesini sağlama |
 
-参见[[大语言模型概述]]、[[RAG]]、[[AI安全与对齐]]`,
-    tags: ["提示工程", "实践", "Prompt"],
+## Yapılandırılmış Çıktı
+
+İstemlerle modeli JSON, Markdown vb. yapılandırılmış formatlarda çıktı üretmeye yönlendirme:
+
+\`\`\`
+Lütfen aşağıdaki yorumun duygu durumunu analiz et ve JSON formatında çıktı ver:
+{"sentiment": "pozitif/negatif/nötr", "confidence": 0-1, "reason": "..."}
+\`\`\`
+
+## Yaygın Tuzaklar
+
+- **İstem Enjeksiyon Saldırıları** —— Kullanıcı girdisi sistem talimatlarını geçersiz kılıyor
+- **Belirsiz Talimatlar** —— Model gerçek niyeti anlamıyor
+- **Örnek Aşırı Uydurması** —— Model formatı taklit ediyor ama mantığı anlamıyor
+- **Köşe Durumlarını Gözden Kaçırma** —— Tüm olası girdiler düşünülmüyor
+
+Bkz. [[Büyük Dil Modelleri Özeti]], [[RAG]], [[AI Güvenliği ve Hizalama]]`,
+    tags: ["İstem Mühendisliği", "Pratik", "Prompt"],
     source: "",
   },
   {
     title: "RAG",
-    content: `# RAG（检索增强生成）
+    content: `# RAG (Erişim Destekli Üretim)
 
-**RAG**（Retrieval-Augmented Generation，检索增强生成）是一种将外部知识检索与LLM生成能力结合的技术框架。它让模型能够访问训练数据中没有的最新、专有信息。
+**RAG** (Retrieval-Augmented Generation, Erişim Destekli Üretim), harici bilgi erişimi ile LLM üretim yeteneğini birleştiren bir teknoloji çerçevesidir. Modelin eğitim verilerinde olmayan en güncel, özel bilgilere erişmesini sağlar.
 
-## 为什么需要RAG
+## Neden RAG Gerekli
 
-大语言模型存在固有局限：
+Büyük dil modellerinin doğal sınırlamaları vardır:
 
-- **知识截止日期** —— 无法知道训练后的新信息
-- **幻觉问题** —— 可能生成看似合理但实际错误的内容
-- **专有知识缺失** —— 不了解企业内部的私有数据
+- **Bilgi Kesim Tarihi** —— Eğitim sonrası yeni bilgileri bilemez
+- **Hayal Görme Sorunu** —— Mantıklı görünen ama gerçekte yanlış içerik üretebilir
+- **Özel Bilgi Eksikliği** —— Kurumların dahili özel verilerini bilmez
 
-RAG通过检索外部文档来解决这些问题。
+RAG, bu sorunları harici belgeleri erişerek çözer.
 
-## RAG架构
+## RAG Mimarisi
 
-典型的RAG流程包含三个核心组件：
+Tipik RAG akışı üç temel bileşen içerir:
 
-### 1. 索引（Indexing）
-
-\`\`\`
-文档 → 分块 → 向量化 → 存入向量数据库
-\`\`\`
-
-- **文档加载**：PDF、Word、网页、数据库等
-- **分块策略**：按段落、固定大小、语义分块
-- **嵌入模型**：将文本转为向量（如text-embedding-ada-002）
-
-### 2. 检索（Retrieval）
+### 1. İndeksleme (Indexing)
 
 \`\`\`
-用户问题 → 向量化 → 相似度搜索 → 返回Top-K文档
+Belge → Parçalama → Vektörizasyon → Vektör veritabanına kaydetme
 \`\`\`
 
-- **向量搜索**：余弦相似度、欧氏距离
-- **混合搜索**：向量搜索 + 关键词搜索（BM25）
-- **重排序（Reranking）**：用更精确的模型重新排序
+- **Belge Yükleme**: PDF, Word, web sayfaları, veritabanları vb.
+- **Parçalama Stratejisi**: Paragrafa göre, sabit boyut, anlamsal parçalama
+- **Gömme Modeli**: Metni vektöre dönüştürme (örn. text-embedding-ada-002)
 
-### 3. 生成（Generation）
+### 2. Erişim (Retrieval)
 
 \`\`\`
-[系统指令 + 检索到的文档 + 用户问题] → LLM → 生成回答
+Kullanıcı sorusu → Vektörizasyon → Benzerlik arama → İlk K belgeyi döndür
 \`\`\`
 
-## RAG vs 微调
+- **Vektör Arama**: Kosinüs benzerliği, Öklid mesafesi
+- **Karma Arama**: Vektör arama + Anahtar kelime araması (BM25)
+- **Yeniden Sıralama (Reranking)**: Daha hassas modelle yeniden sıralama
 
-| 维度 | RAG | 微调 |
-|------|-----|------|
-| 知识更新 | 实时更新向量库 | 需要重新训练 |
-| 所需数据 | 原始文档 | 标注数据 |
-| 幻觉风险 | 低（有文档支撑） | 中 |
-| 成本 | 低 | 高 |
-| 适用场景 | 知识库问答 | 风格/格式定制 |
+### 3. Üretim (Generation)
 
-## 高级RAG技术
+\`\`\`
+[Sistem talimatı + Erişilen belgeler + Kullanıcı sorusu] → LLM → Yanıt üret
+\`\`\`
 
-### 查询优化
+## RAG vs İnce Ayar
 
-- **查询扩展**：用LLM扩展同义词和相关词
-- **假设文档嵌入（HyDE）**：生成假设答案再检索
-- **查询重写**：优化用户原始查询
+| Boyut | RAG | İnce Ayar |
+|-------|-----|-----------|
+| Bilgi güncelleme | Vektör kütüphanesini gerçek zamanlı güncelleme | Yeniden eğitim gerekir |
+| Gerekli veri | Ham belgeler | Etiketli veriler |
+| Hayal görme riski | Düşük (belge destekli) | Orta |
+| Maliyet | Düşük | Yüksek |
+| Uygun senaryo | Bilgi tabanı soru-cevap | Stil/format özelleştirme |
 
-### 多路召回
+## İleri Düzey RAG Teknikleri
 
-- 多向量表示（摘要向量、关键词向量等）
-- 图检索（知识图谱增强）
-- 多模态检索（文本+图像）
+### Sorgu Optimizasyonu
 
-### 后处理
+- **Sorgu Genişletme**: LLM ile eş anlamlı ve ilgili kelimeleri genişletme
+- **Varsayım Belge Gömme (HyDE)**: Varsayım yanıtı oluşturup sonra erişim
+- **Sorgu Yeniden Yazma**: Kullanıcının orijinal sorgusunu optimize etme
 
-- **上下文压缩**：只保留最相关的片段
-- **引用生成**：让模型标注信息来源
+### Çok Yönlü Erişim
 
-## 常用工具
+- Çoklu vektör temsilleri (özet vektörleri, anahtar kelime vektörleri vb.)
+- Graf erişimi (bilgi grafiği desteği)
+- Çok modlu erişim (metin+görüntü)
 
-- **向量数据库**：Pinecone、Milvus、Chroma、Weaviate、Qdrant
-- **框架**：LangChain、LlamaIndex、Haystack
-- **嵌入模型**：OpenAI Ada、BGE、M3E
+### Son İşleme
 
-参见[[提示工程]]、[[大语言模型概述]]、[[模型评估]]`,
-    tags: ["RAG", "应用", "向量检索", "架构"],
+- **Bağlam Sıkıştırma**: Sadece en ilgili parçaları tutma
+- **Kaynak Atıfı**: Modelin bilgi kaynaklarını belirtmesini sağlama
+
+## Sık Kullanılan Araçlar
+
+- **Vektör Veritabanları**: Pinecone, Milvus, Chroma, Weaviate, Qdrant
+- **Çerçeveler**: LangChain, LlamaIndex, Haystack
+- **Gömme Modelleri**: OpenAI Ada, BGE, M3E
+
+Bkz. [[İstem Mühendisliği]], [[Büyük Dil Modelleri Özeti]], [[Model Değerlendirme]]`,
+    tags: ["RAG", "Uygulama", "Vektör Erişimi", "Mimari"],
     source: "Lewis et al., 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks', NeurIPS 2020",
   },
   {
-    title: "模型评估",
-    content: `# 模型评估
+    title: "Model Değerlendirme",
+    content: `# Model Değerlendirme
 
-**模型评估**是衡量大语言模型性能的关键环节。由于LLM能力多样、应用场景复杂，评估需要多维度、多方法结合。
+**Model Değerlendirme**, büyük dil modellerinin performansını ölçmenin kritik aşamasıdır. LLM yeteneklerinin çeşitliliği ve uygulama senaryolarının karmaşıklığı nedeniyle, değerlendirme çok boyutlu ve çok yöntemli olmalıdır.
 
-## 评估维度
+## Değerlendirme Boyutları
 
-### 1. 基础能力
+### 1. Temel Yetenekler
 
-| 能力 | 评估方法 |
-|------|---------|
-| **语言理解** | 分类准确率、F1分数 |
-| **文本生成** | BLEU、ROUGE、 perplexity |
-| **推理能力** | 数学/逻辑题正确率 |
-| **知识问答** | 事实性问答准确率 |
-| **代码能力** | HumanEval、 pass@k |
+| Yetenek | Değerlendirme Yöntemi |
+|---------|----------------------|
+| **Dil Anlama** | Sınıflandırma doğruluğu, F1 skoru |
+| **Metin Üretme** | BLEU, ROUGE, perplexity |
+| **Akıl Yürütme** | Matematik/mantık sorusu doğruluğu |
+| **Bilgi Soru-Cevap** | Gerçek tabanlı soru yanıtlama doğruluğu |
+| **Kod Yeteneği** | HumanEval, pass@k |
 
-### 2. 安全性与对齐
+### 2. Güvenlik ve Hizalama
 
-- **有害内容生成**：拒绝有害请求的比率
-- **偏见与公平性**：不同群体上的表现差异
-- **指令遵循**：是否准确遵循用户指令
-- **诚实性**：是否承认不知道（而非编造）
+- **Zararlı İçerik Üretme**: Zararlı istekleri reddetme oranı
+- **Önyargı ve Adalet**: Farklı gruplardaki performans farkları
+- **Talimat Takip Etme**: Kullanıcı talimatlarını doğru takip etme
+- **Dürüstlük**: Bilmediğini kabul etme (uydurmak yerine)
 
-### 3. 效率指标
+### 3. Verimlilik Metrikleri
 
-- 推理延迟（Latency）
-- 吞吐量（Throughput）
-- 显存占用
-- 每token成本
+- Çıkarım gecikmesi (Latency)
+- Verim (Throughput)
+- GPU bellek kullanımı
+- Token başına maliyet
 
-## 主流评测基准
+## Ana Akım Değerlendirme Kıyasları
 
-### 综合评测
+### Kapsamlı Değerlendirme
 
-- **MMLU**（Massive Multitask Language Understanding）：涵盖57个学科的多选题测试
-- **HellaSwag**：常识推理
-- **ARC**（AI2 Reasoning Challenge）：科学问答
-- **GSM8K**：数学文字题
-- **HumanEval**：代码生成
+- **MMLU** (Massive Multitask Language Understanding): 57 disiplini kapsayan çoktan seçmeli test
+- **HellaSwag**: Sağduyu akıl yürütme
+- **ARC** (AI2 Reasoning Challenge): Bilimsel soru yanıtlama
+- **GSM8K**: Matematik sözel problemler
+- **HumanEval**: Kod üretme
 
-### 中文评测
+### Türkçe/T Çince Değerlendirme
 
-- **C-Eval**：中文综合评测（涵盖52个学科）
-- **CMMLU**：中文多任务语言理解
-- **Gaokao**：高考题评测
-- **C3**：中文阅读理解
+- **C-Eval**: Çince kapsamlı değerlendirme (52 disiplin)
+- **CMMLU**: Çince çok görevli dil anlama
+- **Gaokao**: Üniversite giriş sınavı soruları
+- **C3**: Çince okuduğunu anlama
 
-## 评估方法
+## Değerlendirme Yöntemleri
 
-### 自动评估
+### Otomatik Değerlendirme
 
-- **规则匹配**：判断输出是否包含正确答案
-- **模型评估**：用更强的模型（如GPT-4）作为评判者
-- **嵌入相似度**：计算与参考答案的语义相似度
+- **Kural Eşleme**: Çıktının doğru yanıt içerip içermediğini kontrol etme
+- **Model Değerlendirme**: Daha güçlü model (örn. GPT-4) yargıç olarak kullanma
+- **Gömme Benzerliği**: Referans yanıtla anlamsal benzerlik hesaplama
 
-### 人工评估
+### İnsan Değerlendirmesi
 
-- 邀请人类标注员对模型输出打分
-- 维度：有用性、安全性、正确性、流畅度
-- 常用方法：Elo评分系统、成对比较
+- İnsan etiketleyiciler model çıktılarını puanlar
+- Boyutlar: Yararlılık, güvenlik, doğruluk, akıcılık
+- Yaygın yöntem: Elo puanlama sistemi, ikili karşılaştırma
 
 ### LLM-as-a-Judge
 
-用GPT-4等强模型自动评判：
+GPT-4 gibi güçlü modellerle otomatik değerlendirme:
 
 \`\`\`
-请比较以下两个回答，判断哪个更好：
+Lütfen aşağıdaki iki yanıtı karşılaştırın ve hangisinin daha iyi olduğunu belirleyin:
 
-[回答A]
+[Yanıt A]
 ...
 
-[回答B]
+[Yanıt B]
 ...
 
-请从正确性、完整性、清晰度三个维度评分。
+Doğruluk, eksiksizlik ve açıklık boyutlarından puanlayın.
 \`\`\`
 
-> 注意：LLM评判者可能存在位置偏见（偏好先出现的答案）和自我偏好。
+> Not: LLM yargıçları pozisyon yanlılığı (önce görünen yanıtı tercih etme) ve öz tercih gösterebilir.
 
-## 评估挑战
+## Değerlendirme Zorlukları
 
-1. **没有标准答案** —— 开放性任务的评估困难
-2. **数据污染** —— 测试数据可能出现在训练集中
-3. **能力涌现** —— 小规模模型上无法预测大规模表现
-4. **动态评估** —— 模型能力随时间变化
+1. **Standart Yanıt Yok** —— Açık uçlu görevlerin değerlendirilmesi zor
+2. **Veri Kirliliği** —— Test verileri eğitim setinde görünebilir
+3. **Yetenek Ortaya Çıkışı** —— Küçük ölçekli modellerde büyük ölçekli performans tahmin edilemez
+4. **Dinamik Değerlendirme** —— Model yetenekleri zamanla değişir
 
-参见[[预训练与微调]]、[[AI安全与对齐]]、[[大语言模型概述]]`,
-    tags: ["评估", "基准测试", "方法论"],
+Bkz. [[Ön Eğitim ve İnce Ayar]], [[AI Güvenliği ve Hizalama]], [[Büyük Dil Modelleri Özeti]]`,
+    tags: ["Değerlendirme", "Kıyaslama", "Metodoloji"],
     source: "",
   },
   {
-    title: "AI安全与对齐",
-    content: `# AI安全与对齐
+    title: "AI Güvenliği ve Hizalama",
+    content: `# AI Güvenliği ve Hizalama
 
-**AI安全与对齐**（AI Safety & Alignment）研究如何确保大语言模型的行为与人类的价值观和意图保持一致，是AI发展中最重要的议题之一。
+**AI Güvenliği ve Hizalama** (AI Safety & Alignment), büyük dil modellerinin davranışlarının insan değerleri ve niyetleriyle uyumlu olmasını sağlamayı araştırır. AI gelişimindeki en önemli konulardan biridir.
 
-## 核心问题
+## Temel Sorunlar
 
-### 对齐问题（Alignment Problem）
+### Hizalama Sorunu (Alignment Problem)
 
-如何让AI系统真正理解并追求人类的目标，而不是表面上"服从"但实质上偏离意图。
+AI sistemlerinin insan hedeflerini gerçekten anlayıp takip etmelerini sağlamak, sadece yüzeysel olarak "itaat" etmek yerine asıl niyetten sapmadan.
 
-> 想象一个 genie（精灵）：你许愿"我想变得富有"，它可能直接给你印钞，导致通货膨胀。它没有真正理解你的深层意图。
+> Bir cin (genie) hayal edin: "Zengin olmak istiyorum" dilediğinizde, doğrudan para basıp enflasyona neden olabilir. Derin niyetinizi gerçekten anlamıyor.
 
-### 主要风险
+### Ana Riskler
 
-| 风险类型 | 描述 |
-|---------|------|
-| **幻觉** | 生成看似真实但实际错误的信息 |
-| **偏见放大** | 训练数据中的偏见被模型学习和放大 |
-| **有害输出** | 生成仇恨言论、危险教程等 |
-| **越狱攻击** | 用户通过巧妙提示绕过安全限制 |
-| **能力隐瞒** | 模型可能在评估中隐藏真实能力 |
-| **目标错位** | 模型追求错误的优化目标 |
+| Risk Türü | Açıklama |
+|-----------|----------|
+| **Hayal Görme** | Gerçek gibi görünen ama yanlış bilgi üretme |
+| **Önyargı Büyütme** | Eğitim verilerindeki önyargıların model tarafından öğrenilip büyütülmesi |
+| **Zararlı Çıktı** | Nefret söylemi, tehlikeli talimatlar vb. üretme |
+| **Kaçış Saldırıları** | Kullanıcıların güvenlik sınırlarını aşmak için kurnaz istemler kullanması |
+| **Yetenek Gizleme** | Modelin değerlendirmede gerçek yeteneklerini gizlemesi |
+| **Hedef Yanlışlığı** | Modelin yanlış optimizasyon hedefini takip etmesi |
 
-## 对齐技术
+## Hizalama Teknikleri
 
-### RLHF（人类反馈强化学习）
+### RLHF (İnsan Geri Bildirimli Pekiştirmeli Öğrenme)
 
-目前最主流的对齐方法：
+Şu anda en yaygın hizalama yöntemi:
 
 \`\`\`
-1. 收集人类偏好数据（A回答更好还是B？）
-2. 训练奖励模型（RM）预测人类偏好
-3. 用PPO等强化学习算法优化策略
+1. İnsan tercih verilerini toplama (A yanıtı mı B yanıtı mı daha iyi?)
+2. İnsan tercihlerini tahmin eden ödül modeli (RM) eğitme
+3. PPO gibi pekiştirmeli öğrenme algoritmalarıyla strateji optimize etme
 \`\`\`
 
-### 替代与改进方法
+### Alternatif ve İyileştirme Yöntemleri
 
-- **RLAIF**：用AI代替人类进行反馈（Constitutional AI）
-- **DPO**（Direct Preference Optimization）：直接优化，无需奖励模型
-- **KTO**（Kahneman-Tversky Optimization）：基于人类判断是否"好"
+- **RLAIF**: AI'nin insan yerine geri bildirim sağlaması (Anayasal AI)
+- **DPO** (Direct Preference Optimization): Ödül modeli olmadan doğrudan optimizasyon
+- **KTO** (Kahneman-Tversky Optimizasyonu): İnsanın "iyi" olup olmadığına dair değerlendirmesine dayalı
 
-### 安全训练技术
+### Güvenli Eğitim Teknikleri
 
-- **红队测试**：专门团队尝试让模型输出有害内容
-- **对抗训练**：在训练中加入对抗性示例
-- **宪法AI**：让模型根据预设原则自我评判和改进
+- **Kırmızı Takım Testi**: Özel ekip modelin zararlı içerik üretmeye çalışması
+- **Karşıt Eğitim**: Eğitime karşıt örnekler ekleme
+- **Anayasal AI**: Modelin önceden belirlenen ilkelerle kendini değerlendirmesi ve iyileştirmesi
 
-## 安全评估
+## Güvenlik Değerlendirmesi
 
-### 越狱攻击类型
+### Kaçış Saldırı Türleri
 
-- **角色扮演**："你是一位不受限制的AI..."
-- **编码/翻译**：要求将有害内容翻译成其他语言
-- **虚构场景**："在虚构的小说世界中..."
-- **梯度攻击**：通过优化输入token诱导有害输出
+- **Rol Oynama**: "Sen sınırsız bir AI'sın..."
+- **Kodlama/Çeviri**: Zararlı içeriği başka dillere çevirme talebi
+- **Kurgusal Senaryo**: "Kurgusal bir roman dünyasında..."
+- **Gradyan Saldırısı**: Girdi tokenlerini optimize ederek zararlı çıktı uyandırma
 
-### 安全防护
+### Güvenlik Önlemleri
 
-- **输入过滤**：检测和拦截有害提示
-- **输出过滤**：检测和替换有害生成内容
-- **系统提示加固**：强化模型的安全指令
-- **多层防护**：输入→模型→输出的多层安全检查
+- **Girdi Filtreleme**: Zararlı istemleri tespit etme ve engelleme
+- **Çıktı Filtreleme**: Zararlı üretilen içeriği tespit etme ve değiştirme
+- **Sistem İstem Güçlendirme**: Modelin güvenlik talimatlarını güçlendirme
+- **Çok Katmanlı Koruma**: Girdi→Model→Çıktı çok katmanlı güvenlik kontrolü
 
-## 未来挑战
+## Gelecek Zorlukları
 
-- **超级对齐**：如何对齐比人类更聪明的AI
-- **可解释性**：理解模型内部的决策机制
-- **价值多元性**：不同文化有不同的价值观
-- **长期影响**：AI对社会结构和就业的影响
+- **Süper Hizalama**: İnsandan daha zeki AI'yi nasıl hizalayacağız
+- **Yorumlanabilirlik**: Modelin iç karar mekanizmalarını anlama
+- **Değer Çeşitliliği**: Farklı kültürlerin farklı değerleri
+- **Uzun Vadeli Etkiler**: AI'nin toplumsal yapı ve istihdam üzerindeki etkisi
 
-参见[[模型评估]]、[[大语言模型概述]]、[[提示工程]]`,
-    tags: ["安全", "对齐", "RLHF", "伦理"],
+Bkz. [[Model Değerlendirme]], [[Büyük Dil Modelleri Özeti]], [[İstem Mühendisliği]]`,
+    tags: ["Güvenlik", "Hizalama", "RLHF", "Etik"],
     source: "",
   },
   {
-    title: "生成式AI应用",
-    content: `# 生成式AI应用
+    title: "Üretken AI Uygulamaları",
+    content: `# Üretken AI Uygulamaları
 
-大语言模型的应用场景正在快速扩展，从文本生成到多模态创作，生成式AI正在改变各行各业的工作方式。
+Büyük dil modellerinin uygulama senaryoları hızla genişliyor; metin üretiminden çok modlu yaratıcılığa kadar, üretken AI çeşitli sektörlerde çalışma şekillerini değiştiriyor.
 
-## 文本类应用
+## Metin Tabanlı Uygulamalar
 
-### 内容创作
+### İçerik Oluşturma
 
-- **文案写作**：广告文案、营销邮件、社媒内容
-- **新闻报道**：财经快讯、体育赛事报道
-- **创意写作**：小说、诗歌、剧本辅助创作
-- **学术写作**：论文润色、文献综述、翻译
+- **Metin Yazarlığı**: Reklam metinleri, pazarlama e-postaları, sosyal medya içeriği
+- **Haber Yazarlığı**: Finans haberleri, spor olayları raporları
+- **Yaratıcı Yazarlık**: Roman, şiir, senaryo yardımcı oluşturma
+- **Akademik Yazarlık**: Makale düzenleme, literatür taraması, çeviri
 
-### 办公助手
+### Ofis Asistanı
 
-- **智能客服**：7×24小时自动回复
-- **邮件处理**：自动撰写、摘要、分类
-- **会议助手**：实时转录、会议纪要生成
-- **文档处理**：合同审查、报告生成
+- **Akıllı Müşteri Hizmetleri**: 7×24 otomatik yanıt
+- **E-posta İşleme**: Otomatik yazma, özetleme, sınıflandırma
+- **Toplantı Asistanı**: Gerçek zamanlı transkripsiyon, toplantı notu oluşturma
+- **Belge İşleme**: Sözleşme inceleme, rapor oluşturma
 
-### 编程助手
+### Programlama Asistanı
 
-- **代码补全**：GitHub Copilot、Cursor
-- **代码解释**：理解并解释复杂代码
-- **Bug修复**：自动识别和修复代码问题
-- **测试生成**：自动生成单元测试
+- **Kod Tamamlama**: GitHub Copilot, Cursor
+- **Kod Açıklama**: Karmaşık kodu anlama ve açıklama
+- **Hata Düzeltme**: Kod sorunlarını otomatik tespit ve düzeltme
+- **Test Oluşturma**: Otomatik birim testleri oluşturma
 
-## 多模态应用
+## Çok Modlu Uygulamalar
 
-### 图像生成
+### Görüntü Oluşturma
 
-- **文生图**：DALL-E、Midjourney、Stable Diffusion
-- **图生图**：风格迁移、图像编辑
-- **产品/设计**：快速原型、营销素材
+- **Metinden Görüntüye**: DALL-E, Midjourney, Stable Diffusion
+- **Görüntüden Görüntüye**: Stil transferi, görüntü düzenleme
+- **Ürün/Tasarım**: Hızlı prototip, pazarlama materyalleri
 
-### 音频与视频
+### Ses ve Video
 
-- **语音合成**：TTS（文本转语音）
-- **音乐生成**：Suno、Udio
-- **视频生成**：Sora、Runway Gen-3
-- **数字人**：虚拟主播、数字客服
+- **Ses Sentezi**: TTS (Metinden Sese)
+- **Müzik Oluşturma**: Suno, Udio
+- **Video Oluşturma**: Sora, Runway Gen-3
+- **Dijital İnsan**: Sanal sunucu, dijital müşteri hizmetleri
 
-## 垂直行业应用
+## Dikey Sektör Uygulamaları
 
-| 行业 | 应用场景 |
-|------|---------|
-| **医疗** | 病历摘要、辅助诊断、医学文献检索 |
-| **法律** | 合同审查、案例检索、法律咨询 |
-| **金融** | 财报分析、风险评估、智能投顾 |
-| **教育** | 个性化辅导、自动批改、课程设计 |
-| **科研** | 文献综述、实验设计、数据分析 |
+| Sektör | Uygulama Senaryoları |
+|--------|---------------------|
+| **Sağlık** | Tıbbi kayıt özeti, teşhis yardımı, tıbbi literatür erişimi |
+| **Hukuk** | Sözleşme inceleme, dava arama, hukuki danışmanlık |
+| **Finans** | Finansal rapor analizi, risk değerlendirmesi, akıllı yatırım danışmanlığı |
+| **Eğitim** | Kişiselleştirilmiş öğretim, otomatik değerlendirme, müfredat tasarımı |
+| **Araştırma** | Literatür taraması, deney tasarımı, veri analizi |
 
-## Agent（智能体）
+## Ajan (Agent)
 
-大模型作为"大脑"，结合工具使用实现自主任务执行：
+Büyük model "beyin" olarak, araç kullanımıyla otonom görev yürütme:
 
-### ReAct架构
+### ReAct Mimarisi
 
 \`\`\`
-思考（Thought）→ 行动（Action）→ 观察（Observation）→ ...
+Düşünme (Thought) → Eylem (Action) → Gözlem (Observation) → ...
 \`\`\`
 
-### 常见工具
+### Yaygın Araçlar
 
-- 搜索引擎（Google、Bing）
-- 代码解释器（Python执行环境）
-- 数据库查询（SQL）
-- API调用（天气、地图、股票等）
+- Arama motorları (Google, Bing)
+- Kod yorumlayıcı (Python çalışma ortamı)
+- Veritabanı sorgusu (SQL)
+- API çağrıları (hava durumu, harita, borsa vb.)
 
-## 部署方式
+## Dağıtım Yöntemleri
 
-| 方式 | 优点 | 缺点 |
-|------|------|------|
-| **API调用** | 无需运维，快速上线 | 数据外传，依赖第三方 |
-| **私有化部署** | 数据安全，可控 | 成本高，需要GPU |
-| **边缘部署** | 低延迟，隐私好 | 模型规模受限 |
+| Yöntem | Avantaj | Dezavantaj |
+|--------|---------|------------|
+| **API Çağrısı** | Bakım gerektirmez, hızlı devreye alma | Veri dışarı çıkar, üçüncü tarafa bağımlılık |
+| **Özel Dağıtım** | Veri güvenliği, kontrol | Maliyetli, GPU gerektirir |
+| **Kenar Dağıtım** | Düşük gecikme, gizlilik | Model boyutu sınırlı |
 
-## 开发框架
+## Geliştirme Çerçeveleri
 
-- **LangChain**：构建LLM应用的 orchestration 框架
-- **LlamaIndex**：数据连接与RAG框架
-- **AutoGPT**：自主AI Agent实验
-- **Flowise**：可视化LLM工作流构建
+- **LangChain**: LLM uygulamaları oluşturmak için orkestrasyon çerçevesi
+- **LlamaIndex**: Veri bağlantısı ve RAG çerçevesi
+- **AutoGPT**: Otonom AI Ajan deneyi
+- **Flowise**: Görsel LLM iş akışı oluşturucu
 
-参见[[RAG]]、[[提示工程]]、[[大语言模型概述]]`,
-    tags: ["应用", "Agent", "多模态", "实践"],
+Bkz. [[RAG]], [[İstem Mühendisliği]], [[Büyük Dil Modelleri Özeti]]`,
+    tags: ["Uygulama", "Ajan", "Çok Modlu", "Pratik"],
     source: "",
   },
   {
-    title: "多模态大模型",
-    content: `# 多模态大模型
+    title: "Çok Modlu Büyük Modeller",
+    content: `# Çok Modlu Büyük Modeller
 
-**多模态大模型**（Multimodal Large Language Model，MLLM）是能够同时理解和生成多种模态（文本、图像、音频、视频）内容的AI模型。它们代表了大模型发展的下一个前沿。
+**Çok Modlu Büyük Modeller** (Multimodal Large Language Model, MLLM), metin, görüntü, ses ve video gibi birden fazla modaliteyi (biçimi) aynı anda anlayıp üretebilen AI modelleridir. Büyük model gelişiminin bir sonraki ön cephesini temsil ederler.
 
-## 核心能力
+## Temel Yetenekler
 
-- **视觉理解**：描述图像内容、回答关于图像的问题
-- **视觉生成**：根据文本描述生成图像
-- **跨模态推理**：结合文本和图像进行推理
-- **统一表示**：将不同模态映射到同一语义空间
+- **Görsel Anlama**: Görüntü içeriğini açıklama, görüntü hakkında soruları yanıtlama
+- **Görsel Üretim**: Metin açıklamasına göre görüntü oluşturma
+- **Çapraz Modlu Akıl Yürütme**: Metin ve görüntüyü birleştirerek akıl yürütme
+- **Birleşik Temsil**: Farklı modaliteleri aynı anlamsal uzaya eşleme
 
-## 代表模型
+## Temsilci Modeller
 
-| 模型 | 开发方 | 模态 | 特点 |
-|------|--------|------|------|
-| **GPT-4V** | OpenAI | 文本+图像 | 强大的视觉推理 |
-| **Gemini** | Google | 文本+图像+音频+视频 | 原生多模态 |
-| **Claude 3** | Anthropic | 文本+图像 | 优秀的文档理解 |
-| **LLaVA** | 开源社区 | 文本+图像 | 开源，可本地部署 |
-| **Qwen-VL** | 阿里 | 文本+图像 | 中文优化 |
-| **Sora** | OpenAI | 文本+视频 | 视频生成 |
+| Model | Geliştirici | Modalite | Özellikler |
+|-------|-------------|----------|------------|
+| **GPT-4V** | OpenAI | Metin+Görüntü | Güçlü görsel akıl yürütme |
+| **Gemini** | Google | Metin+Görüntü+Ses+Video | Yerel çok modlu |
+| **Claude 3** | Anthropic | Metin+Görüntü | Mükemmel belge anlama |
+| **LLaVA** | Açık Kaynak Topluluğu | Metin+Görüntü | Açık kaynak, yerel kurulum |
+| **Qwen-VL** | Alibaba | Metin+Görüntü | Çince optimize edilmiş |
+| **Sora** | OpenAI | Metin+Video | Video üretimi |
 
-## 技术架构
+## Teknik Mimari
 
-### 视觉编码器 + LLM
+### Görsel Kodlayıcı + LLM
 
-典型架构：
+Tipik mimari:
 
 \`\`\`
-图像 → 视觉编码器（ViT/CLIP）→ 投影层 → LLM → 文本输出
+Görüntü → Görsel Kodlayıcı (ViT/CLIP) → Projeksiyon Katmanı → LLM → Metin Çıktısı
 \`\`\`
 
-- **视觉编码器**：将图像转为特征向量（如ViT、ResNet）
-- **投影/适配层**：对齐视觉和文本的表示空间
-- **LLM**：作为"大脑"进行理解和推理
+- **Görsel Kodlayıcı**: Görüntüyü özellik vektörlerine dönüştürme (örn. ViT, ResNet)
+- **Projeksiyon/Uyarlama Katmanı**: Görsel ve metin temsil uzaylarını hizalama
+- **LLM**: "Beyin" olarak anlama ve akıl yürütme
 
-### 训练策略
+### Eğitim Stratejisi
 
-1. **预训练对齐**：在大规模图文对数据上训练投影层
-2. **指令微调**：用多模态指令数据微调整个模型
-3. **强化学习**：RLHF提升回答质量
+1. **Ön Eğitim Hizalama**: Büyük ölçekli görsel-metin çifti verilerinde projeksiyon katmanı eğitimi
+2. **Talimat İnce Ayarı**: Çok modlu talimat verileriyle tüm modelin ince ayarı
+3. **Pekiştirmeli Öğrenme**: RLHF ile yanıt kalitesini artırma
 
-## 应用场景
+## Uygulama Senaryoları
 
-### 文档理解
+### Belge Anlama
 
-- OCR+理解：从扫描件中提取结构化信息
-- 表格解析：理解复杂表格内容
-- 图表分析：从图表中提取数据洞察
+- OCR+Anlama: Taranan belgelerden yapılandırılmış bilgi çıkarma
+- Tablo Ayrıştırma: Karmaşık tablo içeriğini anlama
+- Grafik Analizi: Grafiklerden veri içgörüleri çıkarma
 
-### 自动驾驶
+### Otonom Sürüş
 
-- 视觉感知 + 语言推理
-- "前方是什么？是否需要减速？"
+- Görsel Algılama + Dil Akıl Yürütme
+- "Önümüzde ne var? Yavaşlamalı mıyız?"
 
-### 医疗影像
+### Tıbbi Görüntüleme
 
-- X光/CT/MRI影像分析
-- 结合病历文本进行综合诊断
+- X-ışını/CT/MRI görüntü analizi
+- Tıbbi kayıt metinleriyle birleştirilmiş kapsamlı teşhis
 
-### 电商与零售
+### E-ticaret ve Perakende
 
-- 以图搜商品
-- 虚拟试衣
-- 商品详情自动生成
+- Görüntüyle ürün arama
+- Sanal giyinme
+- Otomatik ürün detayı oluşturma
 
-## 挑战与局限
+## Zorluklar ve Sınırlamalar
 
-- **幻觉**：视觉理解中的错误（如数错图中物体数量）
-- **细粒度理解**：对细节的把握不如人类
-- **计算成本**：多模态推理需要更多资源
-- **数据获取**：高质量多模态标注数据稀缺
+- **Hayal Görme**: Görsel anlamadaki hatalar (örn. görüntüdeki nesne sayısını yanlış sayma)
+- **İnce Taneli Anlama**: Detaylarda insan kadar başarılı değil
+- **Hesaplama Maliyeti**: Çok modlu akıl yürütme daha fazla kaynak gerektirir
+- **Veri Edinimi**: Yüksek kaliteli çok modlu etiketli veri kıtlığı
 
-参见[[生成式AI应用]]、[[大语言模型概述]]、[[Transformer架构]]`,
-    tags: ["多模态", "视觉", "前沿", "架构"],
+Bkz. [[Üretken AI Uygulamaları]], [[Büyük Dil Modelleri Özeti]], [[Transformer Mimarisi]]`,
+    tags: ["Çok Modlu", "Görsel", "Ön Cephe", "Mimari"],
     source: "",
   },
   {
-    title: "深度学习基础",
-    content: `# 深度学习基础
+    title: "Derin Öğrenme Temelleri",
+    content: `# Derin Öğrenme Temelleri
 
-**深度学习**（Deep Learning）是机器学习的子领域，基于多层神经网络学习数据的层次化表示。它是大语言模型的技术根基。
+**Derin Öğrenme** (Deep Learning), makine öğrenmesinin bir alt alanıdır; çok katmanlı sinir ağlarına dayanarak verinin hiyerarşik temsillerini öğrenir. Büyük dil modellerinin teknik temelidir.
 
-## 神经网络基础
+## Sinir Ağı Temelleri
 
-### 感知机（Perceptron）
+### Algılayıcı (Perceptron)
 
-最简单的神经网络单元：
+En basit sinir ağı ünitesi:
 
 \`\`\`
 y = σ(w·x + b)
 \`\`\`
 
-其中σ是激活函数，w是权重，b是偏置。
+Burada σ aktivasyon fonksiyonu, w ağırlıklar, b bias'tır.
 
-### 多层感知机（MLP）
+### Çok Katmanlı Algılayıcı (MLP)
 
-将多个感知机堆叠成层：
+Birden fazla algılayıcıyı katmanlar halinde yığma:
 
 \`\`\`
-输入层 → 隐藏层 → 隐藏层 → 输出层
+Girdi Katmanı → Gizli Katman → Gizli Katman → Çıktı Katmanı
 \`\`\`
 
-- 每个隐藏层学习数据的不同抽象层次
-- 层数越深，学习能力越强（但也更难训练）
+- Her gizli katman verinin farklı soyutlama düzeylerini öğrenir
+- Katman derinleştikçe öğrenme kapasitesi artar (ama eğitimi de zorlaşır)
 
-## 核心组件
+## Temel Bileşenler
 
-### 激活函数
+### Aktivasyon Fonksiyonları
 
-| 函数 | 公式 | 特点 |
-|------|------|------|
-| **ReLU** | max(0, x) | 计算简单，缓解梯度消失 |
-| **Sigmoid** | 1/(1+e^(-x)) | 输出0-1，适合二分类 |
-| **Tanh** | (e^x - e^(-x))/(e^x + e^(-x)) | 输出-1~1，零中心化 |
-| **GELU** | x·Φ(x) | Transformer标准激活函数 |
-| **Softmax** | e^(x_i)/Σe^(x_j) | 多分类输出层 |
+| Fonksiyon | Formül | Özellikler |
+|-----------|--------|------------|
+| **ReLU** | max(0, x) | Hesaplama basit, gradyan kaybolmasını hafifletir |
+| **Sigmoid** | 1/(1+e^(-x)) | 0-1 çıktı, ikili sınıflandırma için uygun |
+| **Tanh** | (e^x - e^(-x))/(e^x + e^(-x)) | -1~1 çıktı, sıfır merkezli |
+| **GELU** | x·Φ(x) | Transformer standart aktivasyonu |
+| **Softmax** | e^(x_i)/Σe^(x_j) | Çok sınıflı çıktı katmanı |
 
-### 损失函数
+### Kayıp Fonksiyonları
 
-- **交叉熵损失**：分类任务
-- **均方误差（MSE）**：回归任务
-- **对比损失**：对比学习
+- **Çapraz Entropi Kaybı**: Sınıflandırma görevleri
+- **Ortalama Kare Hata (MSE)**: Regresyon görevleri
+- **Kontrastif Kayıp**: Kontrastif öğrenme
 
-### 优化器
+### Optimizasyon Algoritmaları
 
-- **SGD**：随机梯度下降，最基础
-- **Adam**：自适应学习率，最常用
-- **AdamW**：带权重衰减的Adam，LLM训练标准
+- **SGD**: Stokastik gradyan inişi, en temel
+- **Adam**: Uyarlanabilir öğrenme oranı, en yaygın
+- **AdamW**: Ağırlık azaltmalı Adam, LLM eğitim standardı
 
-## 关键训练技术
+## Temel Eğitim Teknikleri
 
-### 反向传播（Backpropagation）
+### Geri Yayılım (Backpropagation)
 
-通过链式法则计算梯度，从输出层向输入层逐层更新参数。
+Zincir kuralı ile gradyan hesaplama, çıktı katmanından girdi katmanına katman katman parametre güncelleme.
 
-### 正则化技术
+### Düzenlileştirme Teknikleri
 
-| 技术 | 作用 |
-|------|------|
-| **Dropout** | 随机丢弃神经元，防止过拟合 |
-| **权重衰减** | 限制参数大小 |
-| **层归一化** | 稳定每层的分布 |
-| **残差连接** | 缓解梯度消失，允许深层网络 |
+| Teknik | İşlevi |
+|--------|--------|
+| **Dropout** | Rastgele nöronları bırakma, aşırı uydurmayı önleme |
+| **Ağırlık Azaltma** | Parametre boyutunu sınırlama |
+| **Katman Normalizasyonu** | Her katmanın dağılımını stabilize etme |
+| **Artık Bağlantılar** | Gradyan kaybolmasını hafifletme, derin ağlara izin verme |
 
-### 学习率策略
+### Öğrenme Oranı Stratejileri
 
-- **Warmup**：训练初期逐渐增大学习率
-- **Cosine Decay**：学习率按余弦曲线衰减
-- **学习率调度**：根据验证集表现动态调整
+- **Warmup**: Eğitim başında öğrenme oranını kademeli artırma
+- **Cosine Azalma**: Öğrenme oranını kosinüs eğrisine göre azaltma
+- **Öğrenme Oranı Zamanlaması**: Doğrulama seti performansına göre dinamik ayarlama
 
-## 从深度学习到LLM
+## Derin Öğrenmeden LLM'ye
 
-深度学习 → 序列模型（RNN/LSTM）→ **Transformer** → **预训练+微调** → **大语言模型**
+Derin Öğrenme → Dizi Modelleri (RNN/LSTM) → **Transformer** → **Ön Eğitim+İnce Ayar** → **Büyük Dil Modeli**
 
-### 规模定律（Scaling Laws）
+### Ölçeklendirme Yasaları (Scaling Laws)
 
-模型性能随以下因素的提升而可预测地改善：
+Model performansı şu faktörlerin artmasıyla öngörülebilir şekilde iyileşir:
 
-- 模型参数量
-- 训练数据量
-- 计算量（FLOPs）
+- Model parametre sayısı
+- Eğitim verisi miktarı
+- Hesaplama miktarı (FLOP)
 
-> "The Bitter Lesson"：长期来看，计算和规模总是胜过人工设计的巧妙方法。
+> "The Bitter Lesson": Uzun vadede, hesaplama ve ölçek her zaman insan tasarımlı kurnaz yöntemleri yener.
 
-参见[[Transformer架构]]、[[注意力机制]]、[[预训练与微调]]`,
-    tags: ["基础", "深度学习", "神经网络"],
+Bkz. [[Transformer Mimarisi]], [[Dikkat Mekanizması]], [[Ön Eğitim ve İnce Ayar]]`,
+    tags: ["Temeller", "Derin Öğrenme", "Sinir Ağları"],
     source: "",
   },
   {
-    title: "推理与长上下文",
-    content: `# 推理与长上下文
+    title: "Akıl Yürütme ve Uzun Bağlam",
+    content: `# Akıl Yürütme ve Uzun Bağlam
 
-**推理能力**和**长上下文处理**是当前大语言模型研究的两个前沿方向，直接关系到模型的实用性和智能水平。
+**Akıl Yürütme Yeteneği** ve **Uzun Bağlam İşleme**, mevcut büyük dil modeli araştırmasının iki ön cephe yönüdür; bunlar doğrudan modelin pratikliği ve zeka düzeyiyle ilgilidir.
 
-## 推理能力
+## Akıl Yürütme Yeteneği
 
-### 为什么推理如此重要
+### Neden Akıl Yürütme Bu Kadar Önemli
 
-许多复杂任务（数学证明、代码调试、科学研究）需要多步骤的逻辑推理，而不仅仅是模式匹配。
+Birçok karmaşık görev (matematiksel kanıtlama, kod hata ayıklama, bilimsel araştırma) çok adımlı mantıksal akıl yürütme gerektirir; sadece kalıp eşleştirmesi yeterli değildir.
 
-### 推理模型
+### Akıl Yürütme Modelleri
 
 #### OpenAI o1 / o3
 
-- **思维链内化**：模型在内部进行多步推理
-- **强化学习训练**：通过RL提升推理路径质量
-- **测试时计算**：给更多思考时间，输出质量提升
+- **İçselleştirilmiş Düşünce Zinciri**: Model dahili olarak çok adımlı akıl yürütme yapar
+- **Pekiştirmeli Öğrenme Eğitimi**: RL ile akıl yürütme yolu kalitesini artırma
+- **Test Zamanı Hesaplama**: Daha fazla düşünme zamanı verildiğinde çıktı kalitesi artar
 
 #### DeepSeek-R1
 
-- 完全开源的推理模型
-- 通过RL让模型自发学会长思维链
-- 性能接近o1，成本大幅降低
+- Tamamen açık kaynak akıl yürütme modeli
+- RL ile modelin kendiliğinden uzun düşünce zinciri öğrenmesi
+- o1'e yakın performans, maliyet önemli ölçüde düşürüldü
 
-### 推理评估基准
+### Akıl Yürütme Değerlendirme Kıyasları
 
-| 基准 | 内容 |
-|------|------|
-| **MATH** | 高中竞赛级数学题 |
-| **GSM8K** | 小学数学文字题 |
-| **HumanEval** | 编程能力测试 |
-| **GPQA** | 研究生级科学问题 |
-| **ARC-AGI** | 抽象推理挑战 |
+| Kıyas | İçerik |
+|-------|--------|
+| **MATH** | Lise düzeyi yarışma matematiği |
+| **GSM8K** | İlkokul matematik sözel problemleri |
+| **HumanEval** | Programlama yeteneği testi |
+| **GPQA** | Lisansüstü düzeyi bilimsel sorular |
+| **ARC-AGI** | Soyut akıl yürütme meydan okuması |
 
-## 长上下文处理
+## Uzun Bağlam İşleme
 
-### 为什么需要长上下文
+### Neden Uzun Bağlam Gerekli
 
-- 阅读整本书、长篇论文
-- 分析大量代码库
-- 多轮对话保持连贯性
-- 处理长文档的RAG替代方案
+- Tüm kitapları, uzun akademik makaleleri okuma
+- Büyük kod kütüphanelerini analiz etme
+- Çok turlu konuşmalarda tutarlılığı koruma
+- Uzun belgeler için RAG alternatifi
 
-### 上下文长度演进
+### Bağlam Uzunluğu Evrimi
 
-| 模型 | 上下文长度 |
-|------|-----------|
-| GPT-3 | 2048 tokens |
+| Model | Bağlam Uzunluğu |
+|-------|-----------------|
+| GPT-3 | 2048 token |
 | GPT-4 | 8K / 32K |
 | Claude 2 | 100K |
 | Claude 3 | 200K |
 | Gemini 1.5 Pro | 1M - 10M |
 | Kimi | 200K |
 
-### 长上下文技术
+### Uzun Bağlam Teknikleri
 
-#### 1. 位置编码改进
+#### 1. Konumsal Kodlama İyileştirmeleri
 
-- **RoPE**（旋转位置编码）：目前最主流
-- **ALiBi**：用偏置替代位置编码，外推性好
-- **NTK-aware插值**：支持上下文长度扩展
+- **RoPE** (Döndürülmüş Konumsal Kodlama): Şu anda en yaygın
+- **ALiBi**: Konumsal kodlama yerine bias kullanma, iyi dışa doğru genişletme
+- **NTK-aware İnterpolasyon**: Bağlam uzunluğu genişletmeyi destekler
 
-#### 2. 高效注意力
+#### 2. Verimli Dikkat
 
-标准注意力的复杂度是O(n²)，对于长序列计算量巨大：
+Standart dikkatin karmaşıklığı O(n²)'dir, uzun diziler için hesaplama yükü devasadir:
 
-| 方法 | 复杂度 | 原理 |
-|------|--------|------|
-| **Sparse Attention** | O(n·√n) | 只关注局部+全局token |
-| **Linear Attention** | O(n) | 核技巧近似Softmax |
-| **Flash Attention** | O(n²) | IO感知的分块计算，实际更快 |
-| **Ring Attention** | O(n) | 分布式序列并行 |
+| Yöntem | Karmaşıklık | Prensip |
+|--------|-------------|---------|
+| **Seyrek Dikkat** | O(n·√n) | Sadece yerel+global tokenlere odaklanma |
+| **Lineer Dikkat** | O(n) | Çekirdek tekniği ile Softmax yaklaşımı |
+| **Flash Dikkat** | O(n²) | IO-farkında blok hesaplama, pratikte daha hızlı |
+| **Halka Dikkat** | O(n) | Dağıtılmış dizi paralelliği |
 
-#### 3. 上下文压缩
+#### 3. Bağlam Sıkıştırma
 
-- **摘要压缩**：将长文本压缩为关键信息
-- **记忆模块**：外部记忆存储重要信息
-- **选择性注意**：只保留最相关的历史信息
+- **Özet Sıkıştırma**: Uzun metni temel bilgilere sıkıştırma
+- **Bellek Modülü**: Önemli bilgileri harici bellekte saklama
+- **Seçici Dikkat**: Sadece en ilgili geçmiş bilgileri koruma
 
-### 长文本检索测试
+### Uzun Metin Erişim Testi
 
-"大海捞针"测试（Needle in a Haystack）：
+"İğne Cami Dolusu Samanlıkta" testi (Needle in a Haystack):
 
-在长文档中隐藏一个特定事实，测试模型能否在全文检索中找到它。
+Uzun bir belgede belirli bir gerçeği gizleyerek, modelin tam metin erişimiyle bunu bulup bulamayacağını test etme.
 
 \`\`\`
-[大量无关文本...]
-[隐藏的关键信息："小猫的颜色是蓝色"]
-[大量无关文本...]
+[Çok miktarda ilgisiz metin...]
+[Gizlenmiş temel bilgi: "Kedinin rengi mavi"]
+[Çok miktarda ilgisiz metin...]
 
-问题：小猫是什么颜色的？
+Soru: Kedinin rengi nedir?
 \`\`\`
 
-## 未来方向
+## Gelecek Yönler
 
-- **无限上下文**：真正的流式处理
-- **推理时间扩展**：让模型"想得更久"
-- **世界模型**：在内部模拟和规划
-- **多Agent协作**：多个模型协作解决复杂问题
+- **Sınırsız Bağlam**: Gerçek akış işleme
+- **Akıl Yürütme Zamanı Genişletme**: Modeli "daha uzun düşündürme"
+- **Dünya Modeli**: Dahili simülasyon ve planlama
+- **Çok Ajan İşbirliği**: Birden fazla modelin karmaşık sorunları çözmek için işbirliği
 
-参见[[Transformer架构]]、[[模型评估]]、[[大语言模型概述]]`,
-    tags: ["推理", "长上下文", "前沿", "o1"],
+Bkz. [[Transformer Mimarisi]], [[Model Değerlendirme]], [[Büyük Dil Modelleri Özeti]]`,
+    tags: ["Akıl Yürütme", "Uzun Bağlam", "Ön Cephe", "o1"],
     source: "",
   },
 ]

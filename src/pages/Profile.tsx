@@ -47,7 +47,7 @@ export default function Profile() {
   if (authLoading) {
     return (
       <div className="h-screen flex items-center justify-center bg-[#05050f]">
-        <div className="text-[#555] text-sm">加载中...</div>
+        <div className="text-[#555] text-sm">Yükleniyor...</div>
       </div>
     );
   }
@@ -56,12 +56,12 @@ export default function Profile() {
     return (
       <div className="h-screen flex items-center justify-center bg-[#05050f]">
         <div className="text-center">
-          <p className="text-[#555] text-sm mb-4">请先登录</p>
+          <p className="text-[#555] text-sm mb-4">Lütfen önce giriş yapın</p>
           <button
             onClick={() => navigate('/login')}
             className="px-4 py-2 text-xs rounded-lg bg-[#c8956c]/20 text-[#c8956c]"
           >
-            去登录
+            Giriş Yap
           </button>
         </div>
       </div>
@@ -69,9 +69,9 @@ export default function Profile() {
   }
 
   const tabs = [
-    { id: 'overview' as const, label: '概览', icon: '◈' },
-    { id: 'badges' as const, label: '徽章', icon: '✦' },
-    { id: 'content' as const, label: '内容', icon: '◉' },
+    { id: 'overview' as const, label: 'Genel Bakış', icon: '◈' },
+    { id: 'badges' as const, label: 'Rozetler', icon: '✦' },
+    { id: 'content' as const, label: 'İçerik', icon: '◉' },
   ];
 
   return (
@@ -83,14 +83,14 @@ export default function Profile() {
             onClick={() => navigate('/discover')}
             className="text-[10px] text-[#666] hover:text-[#aaa] transition-colors"
           >
-            ← 探索星系
+            ← Galaksiyi Keşfet
           </button>
         </div>
         <button
           onClick={logout}
           className="text-[10px] text-[#555] hover:text-[#999] transition-colors"
         >
-          退出登录
+          Çıkış Yap
         </button>
       </header>
 
@@ -116,7 +116,7 @@ export default function Profile() {
           </div>
 
           <div className="flex-1">
-            <h1 className="text-xl text-[#e0e0e0] font-light mb-1">{user.name || '星际探索者'}</h1>
+            <h1 className="text-xl text-[#e0e0e0] font-light mb-1">{user.name || 'Galaksi Kaşifi'}</h1>
             <p className="text-xs text-[#666] mb-2">{user.email || ''}</p>
 
             {editingBio ? (
@@ -126,30 +126,30 @@ export default function Profile() {
                   value={bio}
                   onChange={(e) => setBio(e.target.value)}
                   className="flex-1 px-3 py-2 text-xs rounded-lg bg-white/[0.04] border border-white/[0.08] text-[#aaa] focus:outline-none focus:border-[#c8956c]/30"
-                  placeholder="写点什么介绍自己..."
+                  placeholder="Kendin hakkında bir şeyler yaz..."
                   maxLength={200}
                 />
                 <button
                   onClick={handleSaveBio}
                   className="px-3 py-2 text-xs rounded-lg bg-[#c8956c]/20 text-[#c8956c] hover:bg-[#c8956c]/30 transition-colors"
                 >
-                  保存
+                  Kaydet
                 </button>
                 <button
                   onClick={() => setEditingBio(false)}
                   className="px-3 py-2 text-xs rounded-lg bg-white/[0.04] text-[#666] hover:bg-white/[0.08] transition-colors"
                 >
-                  取消
+                  İptal
                 </button>
               </div>
             ) : (
               <div className="flex items-center gap-2">
-                <p className="text-xs text-[#888] max-w-md">{bio || '还没有个人简介...'}</p>
+                <p className="text-xs text-[#888] max-w-md">{bio || 'Henüz biyografi yok...'}</p>
                 <button
                   onClick={() => setEditingBio(true)}
                   className="text-[10px] text-[#555] hover:text-[#c8956c] transition-colors"
                 >
-                  编辑
+                  Düzenle
                 </button>
               </div>
             )}
@@ -159,10 +159,10 @@ export default function Profile() {
         {/* Stats */}
         <div className="grid grid-cols-4 gap-4 mb-8">
           {[
-            { label: '已读文章', value: stats?.completed ?? 0, icon: '✦' },
-            { label: '进行中', value: stats?.inProgress ?? 0, icon: '◈' },
-            { label: '发布内容', value: userPosts.length, icon: '◉' },
-            { label: '获得徽章', value: userBadges.length, icon: '✶' },
+            { label: 'Okunan Makale', value: stats?.completed ?? 0, icon: '✦' },
+            { label: 'Devam Eden', value: stats?.inProgress ?? 0, icon: '◈' },
+            { label: 'Yayınlanan', value: userPosts.length, icon: '◉' },
+            { label: 'Kazanılan Rozet', value: userBadges.length, icon: '✶' },
           ].map((stat, i) => (
             <div
               key={i}
@@ -199,7 +199,7 @@ export default function Profile() {
             <div className="space-y-6">
               {/* Recent Progress */}
               <div className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.04]">
-                <h3 className="text-xs text-[#aaa] mb-3">阅读进度</h3>
+                <h3 className="text-xs text-[#aaa] mb-3">Okuma İlerlemesi</h3>
                 <div className="space-y-3">
                   {blogposts.slice(0, 5).map((post) => {
                     const progress = Math.random() * 100; // Simulated - would come from actual progress data
@@ -221,7 +221,7 @@ export default function Profile() {
 
               {/* Recent Badges */}
               <div className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.04]">
-                <h3 className="text-xs text-[#aaa] mb-3">最近获得</h3>
+                <h3 className="text-xs text-[#aaa] mb-3">Son Kazanılan</h3>
                 <div className="flex gap-3 flex-wrap">
                   {userBadges.slice(0, 4).map((badge) => (
                     <div
@@ -232,13 +232,13 @@ export default function Profile() {
                       <div>
                         <div className="text-[10px] text-[#aaa]">{badge.name}</div>
                         <div className="text-[9px] text-[#555]">
-                          {new Date(badge.awardedAt).toLocaleDateString('zh-CN')}
+                          {new Date(badge.awardedAt).toLocaleDateString('tr-TR')}
                         </div>
                       </div>
                     </div>
                   ))}
                   {userBadges.length === 0 && (
-                    <p className="text-[10px] text-[#555]">还没有获得徽章，开始探索吧！</p>
+                    <p className="text-[10px] text-[#555]">Henüz rozet kazanılmadı, keşfetmeye başla!</p>
                   )}
                 </div>
               </div>
@@ -248,7 +248,7 @@ export default function Profile() {
           {activeTab === 'badges' && (
             <div>
               {badgesLoading ? (
-                <div className="text-center py-8 text-[#555] text-xs">加载徽章...</div>
+                <div className="text-center py-8 text-[#555] text-xs">Rozetler yükleniyor...</div>
               ) : (
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {badges.map((badge) => {
@@ -281,11 +281,11 @@ export default function Profile() {
                         </div>
                         {hasBadge && (
                           <div className="absolute top-2 right-2">
-                            <span className="text-[10px] text-[#c8956c]">✓ 已获得</span>
+                            <span className="text-[10px] text-[#c8956c]">✓ Kazanıldı</span>
                           </div>
                         )}
                         <div className="mt-2 text-[9px] text-[#444]">
-                          条件: {badge.requirement || '探索中'}
+                          Koşul: {badge.requirement || 'Keşifte'}
                         </div>
                       </div>
                     );
@@ -298,12 +298,12 @@ export default function Profile() {
           {activeTab === 'content' && (
             <div className="space-y-3">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xs text-[#aaa]">我的发布</h3>
+                <h3 className="text-xs text-[#aaa]">Yayınlarım</h3>
                 <button
                   onClick={() => navigate('/discover')}
                   className="px-3 py-1.5 text-[10px] rounded-lg bg-[#c8956c]/20 text-[#c8956c] hover:bg-[#c8956c]/30 transition-colors"
                 >
-                  + 新建内容
+                  + Yeni İçerik
                 </button>
               </div>
 
@@ -320,9 +320,9 @@ export default function Profile() {
                     <div className="flex-1">
                       <h4 className="text-xs text-[#aaa] mb-1">{post.title}</h4>
                       <div className="flex items-center gap-2">
-                        <span className="text-[9px] text-[#555]">{post.category || '未分类'}</span>
+                        <span className="text-[9px] text-[#555]">{post.category || 'Kategorisiz'}</span>
                         <span className="text-[9px] text-[#444]">·</span>
-                        <span className="text-[9px] text-[#555]">{post.readTime || 5} 分钟</span>
+                        <span className="text-[9px] text-[#555]">{post.readTime || 5} dk</span>
                       </div>
                     </div>
                     <div className="flex gap-1">
@@ -336,12 +336,12 @@ export default function Profile() {
                 ))
               ) : (
                 <div className="text-center py-8">
-                  <p className="text-xs text-[#555] mb-4">还没有发布内容</p>
+                  <p className="text-xs text-[#555] mb-4">Henüz yayınlanan içerik yok</p>
                   <button
                     onClick={() => navigate('/discover')}
                     className="px-4 py-2 text-xs rounded-lg bg-[#c8956c]/20 text-[#c8956c] hover:bg-[#c8956c]/30 transition-colors"
                   >
-                    去创建
+                    Oluştur
                   </button>
                 </div>
               )}

@@ -7,11 +7,12 @@ import NotFound from './pages/NotFound';
 const Discover = lazy(() => import('./pages/Discover'));
 const BlogReader = lazy(() => import('./pages/BlogReader'));
 const Profile = lazy(() => import('./pages/Profile'));
+const Notes = lazy(() => import('./pages/Notes'));
 
 function PageLoader() {
   return (
     <div className="h-screen flex items-center justify-center bg-[#05050f]">
-      <div className="text-[#555] text-sm">加载中...</div>
+      <div className="text-[#555] text-sm">Yükleniyor...</div>
     </div>
   );
 }
@@ -34,6 +35,11 @@ export default function App() {
       <Route path="/profile" element={
         <Suspense fallback={<PageLoader />}>
           <Profile />
+        </Suspense>
+      } />
+      <Route path="/notes" element={
+        <Suspense fallback={<PageLoader />}>
+          <Notes />
         </Suspense>
       } />
       <Route path="*" element={<NotFound />} />

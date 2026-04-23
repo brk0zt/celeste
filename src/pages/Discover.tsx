@@ -221,7 +221,7 @@ export default function Discover() {
   if (isLoading) {
     return (
       <div className="h-screen flex items-center justify-center bg-[#05050f]">
-        <div className="text-[#555] text-sm">加载星系数据...</div>
+        <div className="text-[#555] text-sm">Galaksi verileri yükleniyor...</div>
       </div>
     );
   }
@@ -242,10 +242,10 @@ export default function Discover() {
         <div className="absolute top-6 left-6 z-10">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-[#c8956c] text-lg">☾</span>
-            <span className="text-xs text-[#888] tracking-wider">知识星系</span>
+            <span className="text-xs text-[#888] tracking-wider">Bilgi Galaksisi</span>
           </div>
           <p className="text-[10px] text-[#555] max-w-[200px]">
-            点击星点探索内容，或悬停查看预览
+            İçerik keşfetmek için yıldızlara tıkla veya önizleme için üzerine gel
           </p>
         </div>
 
@@ -259,7 +259,7 @@ export default function Discover() {
                 onClick={() => navigate(`/blog/${selectedPost.id}`)}
                 className="mt-2 px-3 py-1.5 text-[10px] rounded-md bg-[#c8956c]/20 text-[#c8956c] hover:bg-[#c8956c]/30 transition-colors"
               >
-                开始阅读 →
+                Okumaya Başla →
               </button>
             </div>
           </div>
@@ -270,7 +270,7 @@ export default function Discover() {
           onClick={() => navigate('/')}
           className="absolute top-6 right-6 z-10 px-3 py-1.5 text-[10px] rounded-lg bg-white/[0.04] text-[#666] hover:bg-white/[0.08] hover:text-[#aaa] transition-colors border border-white/[0.06]"
         >
-          ← 返回
+          ← Geri
         </button>
       </div>
 
@@ -278,8 +278,8 @@ export default function Discover() {
       <div className="w-1/2 overflow-y-auto" style={{ scrollbarWidth: 'thin', scrollbarColor: '#333 #05050f' }}>
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-lg text-[#e0e0e0] font-light">内容星图</h2>
-            <span className="text-[10px] text-[#555]">{blogposts.length} 篇内容</span>
+            <h2 className="text-lg text-[#e0e0e0] font-light">İçerik Haritası</h2>
+            <span className="text-[10px] text-[#555]">{blogposts.length} içerik</span>
           </div>
 
           {/* Cards grid - 14:18 aspect ratio is approximately 2:2.57, so we'll use a fixed height approach */}
@@ -316,13 +316,13 @@ export default function Discover() {
                   {/* Category tag */}
                   <div className="absolute top-3 left-3 z-10">
                     <span className="px-2 py-1 text-[9px] rounded-md bg-black/40 text-[#c8956c] border border-[#c8956c]/20 backdrop-blur-sm">
-                      {post.category || '探索'}
+                      {post.category || 'Keşif'}
                     </span>
                   </div>
 
                   {/* Read time */}
                   <div className="absolute top-3 right-3 z-10">
-                    <span className="text-[9px] text-[#666]">{post.readTime || 5} 分钟</span>
+                    <span className="text-[9px] text-[#666]">{post.readTime || 5} dk</span>
                   </div>
 
                   {/* Netflix-style video preview on hover */}

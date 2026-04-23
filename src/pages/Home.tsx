@@ -158,26 +158,26 @@ export default function Home() {
 
   const features = [
     {
-      title: "星际探索",
-      desc: "在知识星系中发现精彩内容",
+      title: "Galaksi Keşfi",
+      desc: "Bilgi galaksisinde harika içerikler keşfedin",
       icon: "✦",
       action: () => navigate('/discover'),
     },
     {
-      title: "沉浸阅读",
-      desc: "如翻阅星际之书般体验内容",
+      title: "LLM Notları",
+      desc: "Obsidian tarzı notlarla bilgi haritası oluşturun",
       icon: "◈",
-      action: () => navigate('/discover'),
+      action: () => navigate('/notes'),
     },
     {
-      title: "虚拟实验",
-      desc: "亲手操作，深入理解核心概念",
+      title: "Sanal Deneyler",
+      desc: "Elinizle uygulayın, temel kavramları derinlemesine anlayın",
       icon: "◇",
       action: () => navigate('/discover'),
     },
     {
-      title: "成就徽章",
-      desc: "收集徽章，记录学习旅程",
+      title: "Başarı Rozetleri",
+      desc: "Rozetleri toplayın, öğrenme yolculuğunuzu kaydedin",
       icon: "✶",
       action: () => isAuthenticated ? navigate('/profile') : navigate('/login'),
     },
@@ -208,7 +208,7 @@ export default function Home() {
                   onClick={() => navigate('/profile')}
                   className="flex items-center gap-2 text-xs text-[#888] hover:text-[#c8956c] transition-colors"
                 >
-                  <span>{user.name || '探索者'}</span>
+                  <span>{user.name || 'Kaşif'}</span>
                   {user.avatar && (
                     <img src={user.avatar} alt="" className="w-6 h-6 rounded-full" />
                   )}
@@ -217,7 +217,7 @@ export default function Home() {
                   onClick={() => navigate('/discover')}
                   className="px-4 py-2 text-xs rounded-lg bg-[#c8956c]/20 text-[#c8956c] hover:bg-[#c8956c]/30 transition-colors border border-[#c8956c]/30"
                 >
-                  开始探索
+                  Keşfe Başla
                 </button>
               </>
             ) : (
@@ -225,7 +225,7 @@ export default function Home() {
                 onClick={() => navigate('/login')}
                 className="px-4 py-2 text-xs rounded-lg bg-[#c8956c]/20 text-[#c8956c] hover:bg-[#c8956c]/30 transition-colors border border-[#c8956c]/30"
               >
-                登录
+                Giriş Yap
               </button>
             )}
           </div>
@@ -240,13 +240,13 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-light text-[#e0e0e0] mb-4 tracking-wide">
-              知识<span className="text-[#c8956c]">星系</span>
+              Bilgi <span className="text-[#c8956c]">Galaksisi</span>
             </h1>
             <p className="text-sm md:text-base text-[#888] mb-2 leading-relaxed">
-              在浩瀚的内容宇宙中，每一篇博客都是一颗闪耀的星
+              Uçsuz bucaksız içerik evreninde, her blog parıldayan bir yıldızdır
             </p>
             <p className="text-xs text-[#666] mb-8">
-              探索 · 阅读 · 实验 · 成长
+              Keşfet · Oku · Dene · Geliş
             </p>
 
             <div className="flex items-center justify-center gap-4">
@@ -254,14 +254,14 @@ export default function Home() {
                 onClick={() => navigate('/discover')}
                 className="px-8 py-3 text-sm rounded-xl bg-[#c8956c]/20 text-[#c8956c] hover:bg-[#c8956c]/30 transition-all border border-[#c8956c]/30 hover:shadow-[0_0_20px_rgba(200,149,108,0.2)]"
               >
-                探索星系
+                Galaksiyi Keşfet
               </button>
               {!isAuthenticated && (
                 <button
                   onClick={() => navigate('/login')}
                   className="px-8 py-3 text-sm rounded-xl bg-white/[0.04] text-[#888] hover:bg-white/[0.08] hover:text-[#aaa] transition-all border border-white/[0.06]"
                 >
-                  加入旅程
+                  Yolculuğa Katıl
                 </button>
               )}
             </div>
@@ -311,7 +311,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="px-8 py-6 text-center">
-          <p className="text-[10px] text-[#444]">Moon Note — 在知识的星系中航行</p>
+          <p className="text-[10px] text-[#444]">Ay Notu — Bilgi galaksisinde yol al</p>
         </footer>
       </div>
     </div>

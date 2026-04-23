@@ -76,6 +76,8 @@ export interface GraphNode {
 export interface GraphEdge {
   source: string;
   target: string;
+  semantic?: boolean;
+  strength?: number;
 }
 
 export interface GraphData {

@@ -54,7 +54,7 @@ function PostItLab({ lab, onOpen }: { lab: VirtualLab; onOpen: () => void }) {
         <div className="text-[#7c6a4a] text-[9px] leading-relaxed line-clamp-3">
           {lab.description || lab.instructions?.slice(0, 60) + '...'}
         </div>
-        <div className="mt-2 text-[#9c8a6a] text-[8px]">点击展开实验</div>
+        <div className="mt-2 text-[#9c8a6a] text-[8px]">Deneyi Açmak İçin Tıkla</div>
       </div>
     </div>
   );
@@ -138,7 +138,7 @@ function OrigamiQuiz({ quiz, onOpen }: { quiz: Quiz; onOpen: () => void }) {
         </svg>
         {isFolded && (
           <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[8px] text-[#c8956c] whitespace-nowrap">
-            答题
+            Soru Cevap
           </div>
         )}
       </div>
@@ -184,13 +184,13 @@ function LabModal({ lab, onClose }: { lab: VirtualLab; onClose: () => void }) {
         <p className="text-sm text-[#7c6a4a] mb-4">{lab.description}</p>
 
         <div className="bg-[#fffbeb] rounded-lg p-4 mb-4 border border-[#d4c4a4]/30">
-          <h4 className="text-xs font-bold text-[#5c4a2a] mb-2">实验说明</h4>
+          <h4 className="text-xs font-bold text-[#5c4a2a] mb-2">Deney Talimatları</h4>
           <p className="text-xs text-[#6c5a4a] leading-relaxed">{lab.instructions}</p>
         </div>
 
         {lab.codeTemplate && (
           <div className="bg-[#1a1a2e] rounded-lg p-4 mb-4">
-            <h4 className="text-xs font-bold text-[#c8956c] mb-2">代码模板</h4>
+            <h4 className="text-xs font-bold text-[#c8956c] mb-2">Kod Şablonu</h4>
             <pre className="text-[10px] text-[#aaa] overflow-x-auto whitespace-pre-wrap font-mono leading-relaxed">
               {lab.codeTemplate}
             </pre>
@@ -198,7 +198,7 @@ function LabModal({ lab, onClose }: { lab: VirtualLab; onClose: () => void }) {
         )}
 
         <div className="bg-[#f0e6d0] rounded-lg p-4 mb-6">
-          <h4 className="text-xs font-bold text-[#5c4a2a] mb-1">预期输出</h4>
+          <h4 className="text-xs font-bold text-[#5c4a2a] mb-1">Beklenen Çıktı</h4>
           <p className="text-xs text-[#7c6a4a]">{lab.expectedOutput}</p>
         </div>
 
@@ -207,13 +207,13 @@ function LabModal({ lab, onClose }: { lab: VirtualLab; onClose: () => void }) {
             onClick={onClose}
             className="flex-1 px-4 py-2 text-xs rounded-lg bg-[#5c4a2a] text-[#fef3c7] hover:bg-[#4c3a1a] transition-colors"
           >
-            完成实验
+            Deneyi Tamamla
           </button>
           <button
             onClick={onClose}
             className="px-4 py-2 text-xs rounded-lg border border-[#5c4a2a]/30 text-[#5c4a2a] hover:bg-[#5c4a2a]/10 transition-colors"
           >
-            关闭
+            Kapat
           </button>
         </div>
       </div>
@@ -309,7 +309,7 @@ function QuizModal({ quiz, onClose }: { quiz: Quiz; onClose: () => void }) {
           {showResult && (
             <div className="mt-4 p-3 rounded-lg bg-white/[0.04]">
               <p className={`text-xs mb-1 ${isCorrect ? 'text-green-400' : 'text-red-400'}`}>
-                {isCorrect ? '✓ 回答正确！' : '✗ 回答错误'}
+                {isCorrect ? '✓ Doğru Cevap!' : '✗ Yanlış Cevap'}
               </p>
               {quiz.explanation && (
                 <p className="text-[10px] text-[#888] leading-relaxed">{quiz.explanation}</p>
@@ -322,7 +322,7 @@ function QuizModal({ quiz, onClose }: { quiz: Quiz; onClose: () => void }) {
               onClick={onClose}
               className="px-6 py-2 text-xs rounded-lg bg-[#c8956c]/20 text-[#c8956c] hover:bg-[#c8956c]/30 transition-colors border border-[#c8956c]/30"
             >
-              关闭
+              Kapat
             </button>
           </div>
         </div>
@@ -345,6 +345,7 @@ export default function BlogReader() {
   const [selectedLab, setSelectedLab] = useState<VirtualLab | null>(null);
   const [selectedQuiz, setSelectedQuiz] = useState<Quiz | null>(null);
   const [readPercent, setReadPercent] = useState(0);
+  const [immersiveMode, setImmersiveMode] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
   // Split content into pages
@@ -398,7 +399,7 @@ export default function BlogReader() {
   if (isLoading) {
     return (
       <div className="h-screen flex items-center justify-center bg-[#0a0a1e]">
-        <div className="text-[#555] text-sm">加载内容...</div>
+        <div className="text-[#555] text-sm">İçerik yükleniyor...</div>
       </div>
     );
   }
@@ -407,12 +408,12 @@ export default function BlogReader() {
     return (
       <div className="h-screen flex items-center justify-center bg-[#0a0a1e]">
         <div className="text-center">
-          <p className="text-[#555] text-sm mb-4">内容未找到</p>
+          <p className="text-[#555] text-sm mb-4">İçerik bulunamadı</p>
           <button
             onClick={() => navigate('/discover')}
             className="px-4 py-2 text-xs rounded-lg bg-[#c8956c]/20 text-[#c8956c]"
           >
-            返回探索
+            Keşfe Dön
           </button>
         </div>
       </div>
@@ -424,17 +425,17 @@ export default function BlogReader() {
 
   return (
     <div className="min-h-screen bg-[#0a0a1e] flex flex-col">
-      {/* Header */}
-      <header className="flex items-center justify-between px-6 py-4 border-b border-white/[0.04]">
+      {/* Header - hidden in immersive mode */}
+      <header className={`flex items-center justify-between px-6 py-4 border-b border-white/[0.04] transition-all duration-300 ${immersiveMode ? 'opacity-0 h-0 overflow-hidden py-0' : 'opacity-100'}`}>
         <div className="flex items-center gap-3">
           <button
             onClick={() => navigate('/discover')}
             className="text-[10px] text-[#666] hover:text-[#aaa] transition-colors"
           >
-            ← 返回星系
+            ← Galaksiye Dön
           </button>
           <span className="text-[10px] text-[#444]">|</span>
-          <span className="text-[10px] text-[#888]">{blogpost.category || '探索'}</span>
+          <span className="text-[10px] text-[#888]">{blogpost.category || 'Keşif'}</span>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-[10px] text-[#555]">
@@ -450,16 +451,37 @@ export default function BlogReader() {
       </header>
 
       {/* Book Content */}
-      <main className="flex-1 flex items-center justify-center p-6">
+      <main
+        className={`flex-1 flex items-center justify-center transition-all duration-500 ${immersiveMode ? 'p-2' : 'p-6'}`}
+        onClick={() => {
+          // Toggle immersive mode when clicking outside book pages
+          setImmersiveMode(!immersiveMode);
+        }}
+      >
+        {/* Expand/Collapse hint button */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setImmersiveMode(!immersiveMode);
+          }}
+          className={`absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/[0.05] text-[#666] hover:bg-white/[0.1] hover:text-[#999] transition-all flex items-center justify-center backdrop-blur-sm border border-white/[0.08] ${immersiveMode ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+          title="Tam ekran modu"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+          </svg>
+        </button>
+
         <div
-          className={`relative w-full max-w-5xl flex transition-all duration-500 ${
+          className={`relative flex transition-all duration-500 ${
             pageTurning === 'right' ? 'translate-x-[-5%] opacity-80' : pageTurning === 'left' ? 'translate-x-[5%] opacity-80' : ''
-          }`}
+          } ${immersiveMode ? 'w-full h-full max-w-none max-h-none' : 'w-full max-w-5xl'}`}
           style={{ perspective: '1200px' }}
+          onClick={(e) => e.stopPropagation()}
         >
           {/* Left Page */}
           <div
-            className="flex-1 relative min-h-[60vh] p-8 md:p-12"
+            className={`flex-1 relative transition-all duration-500 ${immersiveMode ? 'min-h-[85vh] p-12 md:p-16' : 'min-h-[60vh] p-8 md:p-12'}`}
             style={{
               background: 'linear-gradient(to right, #12121e 0%, #1a1a2e 95%, #1e1e35 100%)',
               borderRadius: '8px 0 0 8px',
@@ -486,7 +508,7 @@ export default function BlogReader() {
                 </div>
                 <p className="text-xs text-[#888] text-center max-w-md leading-relaxed">{blogpost.excerpt}</p>
                 <div className="mt-8 text-[10px] text-[#555]">
-                  {blogpost.readTime || 5} 分钟阅读
+                  {blogpost.readTime || 5} dk okuma
                 </div>
               </div>
             ) : (
@@ -505,7 +527,7 @@ export default function BlogReader() {
 
           {/* Right Page */}
           <div
-            className="flex-1 relative min-h-[60vh] p-8 md:p-12"
+            className={`flex-1 relative transition-all duration-500 ${immersiveMode ? 'min-h-[85vh] p-12 md:p-16' : 'min-h-[60vh] p-8 md:p-12'}`}
             style={{
               background: 'linear-gradient(to left, #12121e 0%, #1a1a2e 95%, #1e1e35 100%)',
               borderRadius: '0 8px 8px 0',
@@ -533,7 +555,7 @@ export default function BlogReader() {
                 {/* Interactive elements */}
                 {labs.length > 0 && (
                   <div className="mb-6">
-                    <p className="text-[10px] text-[#555] mb-3">虚拟实验</p>
+                    <p className="text-[10px] text-[#555] mb-3">Sanal Deneyler</p>
                     <div className="flex flex-wrap gap-3 justify-center">
                       {labs.map((lab) => (
                         <PostItLab
@@ -548,7 +570,7 @@ export default function BlogReader() {
 
                 {quizzes.length > 0 && (
                   <div className="mt-4">
-                    <p className="text-[10px] text-[#555] mb-3">知识测验</p>
+                    <p className="text-[10px] text-[#555] mb-3">Bilgi Testi</p>
                     <div className="flex gap-4 justify-center">
                       {quizzes.map((quiz) => (
                         <OrigamiQuiz
@@ -563,8 +585,8 @@ export default function BlogReader() {
 
                 {labs.length === 0 && quizzes.length === 0 && (
                   <div className="text-[#555] text-xs">
-                    <p>本章结束</p>
-                    <p className="text-[10px] mt-2">继续探索更多内容</p>
+                    <p>Bölüm Sonu</p>
+                    <p className="text-[10px] mt-2">Daha fazla içerik keşfet</p>
                   </div>
                 )}
               </div>
@@ -578,14 +600,14 @@ export default function BlogReader() {
         </div>
       </main>
 
-      {/* Navigation */}
-      <footer className="flex items-center justify-center gap-6 px-6 py-4 border-t border-white/[0.04]">
+      {/* Navigation - hidden in immersive mode */}
+      <footer className={`flex items-center justify-center gap-6 px-6 py-4 border-t border-white/[0.04] transition-all duration-300 ${immersiveMode ? 'opacity-0 h-0 overflow-hidden py-0' : 'opacity-100'}`}>
         <button
           onClick={() => turnPage('prev')}
           disabled={currentPage === 0}
           className="px-4 py-2 text-xs rounded-lg bg-white/[0.04] text-[#666] hover:bg-white/[0.08] hover:text-[#aaa] transition-colors disabled:opacity-30 disabled:cursor-not-allowed border border-white/[0.06]"
         >
-          ← 上一页
+          ← Önceki
         </button>
         <span className="text-[10px] text-[#444]">
           {currentPage + 1} / {totalPages}
@@ -595,9 +617,35 @@ export default function BlogReader() {
           disabled={currentPage >= totalPages - 1}
           className="px-4 py-2 text-xs rounded-lg bg-white/[0.04] text-[#666] hover:bg-white/[0.08] hover:text-[#aaa] transition-colors disabled:opacity-30 disabled:cursor-not-allowed border border-white/[0.06]"
         >
-          下一页 →
+          Sonraki →
         </button>
       </footer>
+
+      {/* Floating controls for immersive mode */}
+      {immersiveMode && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 animate-fade-in">
+          <button
+            onClick={() => turnPage('prev')}
+            disabled={currentPage === 0}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/[0.08] text-[#888] hover:bg-white/[0.12] hover:text-[#aaa] transition-all backdrop-blur-sm border border-white/[0.08] disabled:opacity-30"
+          >
+            ←
+          </button>
+          <button
+            onClick={() => setImmersiveMode(false)}
+            className="px-4 py-3 rounded-full bg-white/[0.08] text-[#888] hover:bg-white/[0.12] hover:text-[#aaa] transition-all backdrop-blur-sm border border-white/[0.08] text-xs"
+          >
+            Tam Ekrandan Çık
+          </button>
+          <button
+            onClick={() => turnPage('next')}
+            disabled={currentPage >= totalPages - 1}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/[0.08] text-[#888] hover:bg-white/[0.12] hover:text-[#aaa] transition-all backdrop-blur-sm border border-white/[0.08] disabled:opacity-30"
+          >
+            →
+          </button>
+        </div>
+      )}
 
       {/* Modals */}
       {selectedLab && (
