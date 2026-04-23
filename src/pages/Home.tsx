@@ -49,7 +49,7 @@ export default function Home() {
     starsRef.current = Array.from({ length: starCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      size: Math.random() * 2 + 0.5,
+      size: Math.random() * 1.4 + 0.35,
       opacity: Math.random() * 0.8 + 0.2,
       speed: Math.random() * 0.02 + 0.005,
       twinkleSpeed: Math.random() * 0.03 + 0.01,
@@ -199,7 +199,7 @@ export default function Home() {
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-300/30 to-amber-600/20 border border-amber-400/30 flex items-center justify-center">
               <span className="text-amber-300 text-sm">☾</span>
             </div>
-            <span className="text-[#c8956c] text-sm font-medium tracking-wider">MOON NOTE</span>
+            <span className="text-[#c8956c] text-sm font-medium tracking-wider">brk0zt</span>
           </div>
           <div className="flex items-center gap-4">
             {isAuthenticated && user ? (
