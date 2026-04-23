@@ -1,9 +1,8 @@
-# .github/workflows/deploy.yml dosyasının içeriği
 name: Build and Deploy
 
 on:
   push:
-    branches: [ main ]  # Ana dalınıza her push yaptığınızda tetiklenir
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -21,18 +20,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Projenize göre Node.js sürümünü package.json'dan okuyabilir veya sabitleyebilirsiniz
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Veya projenizde kullanılan sürüm (örn. '18', '16')
+          node-version: '20'
 
       - name: Install Dependencies
-        run: npm ci  # npm install yerine daha hızlı ve güvenilir olan npm ci kullanılır
+        run: npm ci
 
-      # Projenizin build komutunu buraya yazın. package.json'dan bakabilirsiniz.
       - name: Build Project
+        # .env değişkenini tanımlayarak Vite'ın içindeki API adresini Render'daki adresle değiştiriyoruz
+        env:
+          VITE_API_URL: "https://celeste-api.onrender.com" # Buraya kendi Render URL'ni yaz
         run: npm run build
+
+      # --- 404 HATASI İÇİN SPA ÇÖZÜMÜ ---
+      # React Router'ın GitHub Pages'te sorunsuz çalışması için index.html'i 404.html olarak kopyalıyoruz
+      - name: Create SPA 404.html
+        run: cp ./dist/public/index.html ./dist/public/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -40,8 +45,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Projenizin derlenmiş çıktısının klasör adı. Bunu kontrol etmeniz gerekli!
-          path: './dist'  # React, Vite, Vue projeleri için genelde 'dist', Angular için 'dist/your-project-name'
+          path: './dist/public' # Doğru klasör dizini
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
