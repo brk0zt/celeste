@@ -8,6 +8,7 @@ const Discover = lazy(() => import('./pages/Discover'));
 const BlogReader = lazy(() => import('./pages/BlogReader'));
 const Profile = lazy(() => import('./pages/Profile'));
 const Notes = lazy(() => import('./pages/Notes'));
+const Signup = lazy(() => import('./pages/Signup'));
 
 function PageLoader() {
   return (
@@ -22,6 +23,11 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={
+        <Suspense fallback={<PageLoader />}>
+          <Signup />
+        </Suspense>
+      } />
       <Route path="/discover" element={
         <Suspense fallback={<PageLoader />}>
           <Discover />

@@ -1,5 +1,73 @@
-node_modules
-dist
-.git
-*.swp
+# ── Dependencies ────────────────────────────────────────────────
+node_modules/
+.pnpm-store/
+
+# ── Build outputs ───────────────────────────────────────────────
+dist/
+dist-ssr/
+build/
+
+# ── Git ─────────────────────────────────────────────────────────
+.git/
+.gitignore
+.github/
+
+# ── Environment files (NEVER include in Docker) ─────────────────
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.example
+
+# ── Logs ────────────────────────────────────────────────────────
 *.log
+logs/
+
+# ── Database files ──────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Editor files ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Test files ──────────────────────────────────────────────────
+coverage/
+.nyc_output/
+*.test.ts
+*.spec.ts
+vitest.config.ts
+
+# ── OS files ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Security / Secrets ──────────────────────────────────────────
+*.pem
+*.key
+secrets/
+.credentials/
+
+# ── Documentation (not needed in prod image) ────────────────────
+README.md
+LICENSE
+info.md
+*.md
+
+# ── Docker files ────────────────────────────────────────────────
+Dockerfile
+.dockerignore
+docker-compose*
+
+# ── CI/CD ───────────────────────────────────────────────────────
+.backend-features.json
+
+# ── Cache / Temp ────────────────────────────────────────────────
+*.cache
+.temp/
+tmp/

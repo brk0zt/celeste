@@ -5,20 +5,18 @@ import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { appRouter } from "./router";
 import { createContext } from "./context";
 import { env } from "./lib/env";
-import { createOAuthCallbackHandler } from "./kimi/auth";
-import { Paths } from "@contracts/constants";
 import { cors } from 'hono/cors'
 
 const app = new Hono<{ Bindings: HttpBindings }>();
 
 app.use('*', cors({
-  origin: 'https://brk0zt.github.io', // Frontend'inin adresi
+  origin: env.isProduction ? 'https://brk0zt.github.io' : 'http://localhost:5173',
   allowHeaders: ['Content-Type', 'Authorization'],
   allowMethods: ['POST', 'GET', 'OPTIONS', 'PUT', 'DELETE'],
+  credentials: true,
 }))
 
 app.use(bodyLimit({ maxSize: 50 * 1024 * 1024 }));
-app.get(Paths.oauthCallback, createOAuthCallbackHandler());
 app.use("/api/trpc/*", async (c) => {
   return fetchRequestHandler({
     endpoint: "/api/trpc",
