@@ -78,8 +78,6 @@ contracts/
 drizzle.config.ts
 vitest.config.ts
 
-# ── Deployment configs (contain hosting details) ──────────────────
-.github/workflows/deploy*.yml
-.github/workflows/deploy*.yaml
+# ── Docker files ────────────────────────────────────────────────
 Dockerfile
 .dockerignore

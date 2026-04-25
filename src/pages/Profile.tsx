@@ -4,6 +4,10 @@ import { useAuth } from '@/hooks/useAuth';
 import { useBadges } from '@/hooks/useBadges';
 import { useBlogposts } from '@/hooks/useBlogposts';
 import { trpc } from '@/providers/trpc';
+import { ActivityHeatmap } from '@/components/ActivityHeatmap';
+import { LeagueBadge, LeagueProgress } from '@/components/LeagueBadge';
+import { WeeklyChallenges } from '@/components/WeeklyChallenges';
+import { Flame, Target, TrendingUp } from 'lucide-react';
 
 const BADGE_ICONS: Record<string, string> = {
   rocket: '🚀',
@@ -19,7 +23,7 @@ export default function Profile() {
   const { user, isAuthenticated, isLoading: authLoading, logout } = useAuth({ redirectOnUnauthenticated: true });
   const { userBadges, badges, isLoading: badgesLoading } = useBadges();
   const { blogposts } = useBlogposts();
-  const [activeTab, setActiveTab] = useState<'overview' | 'badges' | 'content'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'activity' | 'badges' | 'content' | 'challenges'>('overview');
   const [bio, setBio] = useState('');
   const [editingBio, setEditingBio] = useState(false);
 
@@ -43,6 +47,9 @@ export default function Profile() {
 
   const userPosts = blogposts.filter((p) => p.authorId === user?.id);
   const { data: stats } = trpc.progress.stats.useQuery(undefined, { enabled: isAuthenticated });
+  const { data: activityData } = trpc.activity.getActivityHeatmap.useQuery({ days: 365 }, { enabled: isAuthenticated });
+  const { data: userStats } = trpc.activity.getUserStats.useQuery(undefined, { enabled: isAuthenticated });
+  const { data: challenges } = trpc.activity.getActiveChallenges.useQuery(undefined, { enabled: isAuthenticated });
 
   if (authLoading) {
     return (
@@ -70,6 +77,8 @@ export default function Profile() {
 
   const tabs = [
     { id: 'overview' as const, label: 'Genel Bakış', icon: '◈' },
+    { id: 'activity' as const, label: 'Aktivite', icon: '▣' },
+    { id: 'challenges' as const, label: 'Görevler', icon: '⚡' },
     { id: 'badges' as const, label: 'Rozetler', icon: '✦' },
     { id: 'content' as const, label: 'İçerik', icon: '◉' },
   ];
@@ -292,6 +301,81 @@ export default function Profile() {
                   })}
                 </div>
               )}
+            </div>
+          )}
+
+          {activeTab === 'activity' && (
+            <div className="space-y-6">
+              {/* League Info */}
+              {userStats && (
+                <div className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.04]">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <LeagueBadge
+                        league={userStats.league}
+                        points={userStats.leaguePoints}
+                        rank={1}
+                        size="lg"
+                      />
+                    </div>
+                    <div className="flex items-center gap-4 text-sm text-[#666]">
+                      <span className="flex items-center gap-1">
+                        <Flame className="w-4 h-4 text-orange-500" />
+                        {userStats.currentStreak} gün seri
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Target className="w-4 h-4 text-[#d4a574]" />
+                        {userStats.totalActivities} aktivite
+                      </span>
+                    </div>
+                  </div>
+                  <LeagueProgress
+                    currentPoints={userStats.leaguePoints}
+                    nextLeaguePoints={userStats.leaguePoints + 1000}
+                    currentLeague={userStats.league}
+                  />
+                </div>
+              )}
+
+              {/* Activity Heatmap */}
+              <div className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.04]">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xs text-[#aaa]">Aktivite Haritası</h3>
+                  <span className="text-[10px] text-[#666]">Son 365 gün</span>
+                </div>
+                <ActivityHeatmap data={activityData || []} days={365} />
+              </div>
+
+              {/* Activity Stats */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] text-center">
+                  <TrendingUp className="w-5 h-5 text-[#d4a574] mx-auto mb-2" />
+                  <div className="text-xl text-[#e0e0e0]">{userStats?.weeklyPoints || 0}</div>
+                  <div className="text-[10px] text-[#666]">Haftalık Puan</div>
+                </div>
+                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] text-center">
+                  <Flame className="w-5 h-5 text-orange-500 mx-auto mb-2" />
+                  <div className="text-xl text-[#e0e0e0]">{userStats?.currentStreak || 0}</div>
+                  <div className="text-[10px] text-[#666]">Gün Serisi</div>
+                </div>
+                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] text-center">
+                  <Target className="w-5 h-5 text-[#d4a574] mx-auto mb-2" />
+                  <div className="text-xl text-[#e0e0e0]">{userStats?.totalChallengesCompleted || 0}</div>
+                  <div className="text-[10px] text-[#666]">Tamamlanan Görev</div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'challenges' && (
+            <div className="space-y-6">
+              <WeeklyChallenges
+                challenges={challenges || []}
+                userStats={userStats ? {
+                  weeklyPoints: userStats.weeklyPoints,
+                  streakDays: userStats.currentStreak,
+                } : undefined}
+              />
             </div>
           )}
 
