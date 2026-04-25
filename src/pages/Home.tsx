@@ -209,9 +209,19 @@ export default function Home() {
                   className="flex items-center gap-2 text-xs text-[#888] hover:text-[#c8956c] transition-colors"
                 >
                   <span>{user.name || 'Kaşif'}</span>
-                  {user.avatar && (
-                    <img src={user.avatar} alt="" className="w-6 h-6 rounded-full" />
+                  {user.avatar ? (
+                    <img src={user.avatar} alt="" className="w-6 h-6 rounded-full border border-[#c8956c]/30" />
+                  ) : (
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#1a1a3e] to-[#0a0a1e] border border-[#c8956c]/30 flex items-center justify-center">
+                      <span className="text-[10px] text-[#c8956c]">☾</span>
+                    </div>
                   )}
+                </button>
+                <button
+                  onClick={() => navigate('/leaderboard')}
+                  className="px-3 py-2 text-xs rounded-lg bg-white/[0.04] text-[#888] hover:bg-white/[0.08] hover:text-[#aaa] transition-colors flex items-center gap-1.5"
+                >
+                  <span>🏆</span> Sıralama
                 </button>
                 <button
                   onClick={() => navigate('/discover')}
