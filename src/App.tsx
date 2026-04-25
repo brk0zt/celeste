@@ -9,6 +9,7 @@ const BlogReader = lazy(() => import('./pages/BlogReader'));
 const Profile = lazy(() => import('./pages/Profile'));
 const Notes = lazy(() => import('./pages/Notes'));
 const Signup = lazy(() => import('./pages/Signup'));
+const Leaderboard = lazy(() => import('./pages/Leaderboard'));
 
 function PageLoader() {
   return (
@@ -46,6 +47,11 @@ export default function App() {
       <Route path="/notes" element={
         <Suspense fallback={<PageLoader />}>
           <Notes />
+        </Suspense>
+      } />
+      <Route path="/leaderboard" element={
+        <Suspense fallback={<PageLoader />}>
+          <Leaderboard />
         </Suspense>
       } />
       <Route path="*" element={<NotFound />} />
