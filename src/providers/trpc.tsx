@@ -8,13 +8,13 @@ import type { ReactNode } from "react";
 export const trpc = createTRPCReact<AppRouter>();
 
 // Use deployed API URL in production, local in development
-const API_URL = import.meta.env.VITE_API_URL || "/api/trpc";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 const queryClient = new QueryClient();
 const trpcClient = trpc.createClient({
   links: [
     httpBatchLink({
-      url: `${API_URL}/trpc`,
+      url: `${API_URL}/api/trpc`,
       transformer: superjson,
       fetch(input, init) {
         return globalThis.fetch(input, {
