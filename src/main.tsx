@@ -1,3 +1,4 @@
+// src/main.tsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router'
@@ -7,7 +8,8 @@ import App from './App'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* Vite'ın base ayarını otomatik okuması için import.meta.env.BASE_URL kullanıyoruz */}
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <TRPCProvider>
         <App />
       </TRPCProvider>
